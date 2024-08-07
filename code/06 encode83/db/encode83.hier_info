@@ -1,0 +1,47 @@
+|encode83
+CLK => CLK.IN1
+SW_In[0] => SW_In[0].IN1
+SW_In[1] => SW_In[1].IN1
+SW_In[2] => SW_In[2].IN1
+SW_In[3] => SW_In[3].IN1
+SW_In[4] => SW_In[4].IN1
+SW_In[5] => SW_In[5].IN1
+SW_In[6] => SW_In[6].IN1
+SW_In[7] => SW_In[7].IN1
+LED_Out[0] << encode_module:U1.y
+LED_Out[1] << encode_module:U1.y
+LED_Out[2] << encode_module:U1.y
+LED_Out[3] << encode_module:U1.y
+LED_Out[4] << encode_module:U1.y
+LED_Out[5] << encode_module:U1.y
+LED_Out[6] << encode_module:U1.y
+LED_Out[7] << encode_module:U1.y
+
+
+|encode83|encode_module:U1
+CLK => y[0]~reg0.CLK
+CLK => y[1]~reg0.CLK
+CLK => y[2]~reg0.CLK
+CLK => y[3]~reg0.CLK
+CLK => y[4]~reg0.CLK
+CLK => y[5]~reg0.CLK
+CLK => y[6]~reg0.CLK
+CLK => y[7]~reg0.CLK
+x[0] => Decoder0.IN7
+x[1] => Decoder0.IN6
+x[2] => Decoder0.IN5
+x[3] => Decoder0.IN4
+x[4] => Decoder0.IN3
+x[5] => Decoder0.IN2
+x[6] => Decoder0.IN1
+x[7] => Decoder0.IN0
+y[0] <= y[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= y[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= y[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[6] <= y[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[7] <= y[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

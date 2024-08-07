@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/DELL/Desktop/FPGA/code/08 D-trigger(gate)/D_trigger.v
+source_file = 1, C:/Users/DELL/Desktop/FPGA/code/08 D-trigger(gate)/db/D_trigger.cbx.xml
+design_name = D_trigger
+instance = comp, \LED_Out~output , LED_Out~output, D_trigger, 1
+instance = comp, \Setn~input , Setn~input, D_trigger, 1
+instance = comp, \Clrn~input , Clrn~input, D_trigger, 1
+instance = comp, \CLK~input , CLK~input, D_trigger, 1
+instance = comp, \U6~0 , U6~0, D_trigger, 1
+instance = comp, \SW_In~input , SW_In~input, D_trigger, 1
+instance = comp, \U5~0 , U5~0, D_trigger, 1
+instance = comp, \U4~0 , U4~0, D_trigger, 1
+instance = comp, \U1~1 , U1~1, D_trigger, 1
+design_name = hard_block
+instance = comp, \~ALTERA_ASDO_DATA1~~ibuf , ~ALTERA_ASDO_DATA1~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_FLASH_nCE_nCSO~~ibuf , ~ALTERA_FLASH_nCE_nCSO~~ibuf, hard_block, 1
+instance = comp, \~ALTERA_DATA0~~ibuf , ~ALTERA_DATA0~~ibuf, hard_block, 1

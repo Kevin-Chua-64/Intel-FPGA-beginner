@@ -1,0 +1,29 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "LED_Out",
+					"strict" : false
+				},
+				{
+					"name" : "Setn",
+					"strict" : false
+				},
+				{
+					"name" : "Clrn",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "SW_In",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

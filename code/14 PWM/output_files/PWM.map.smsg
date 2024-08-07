@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at Display_module.v(57): always construct contains both blocking and non-blocking assignments File: D:/Desktop/undergraduate/Embedded/FPGA/code/14 PWM/Display_module.v Line: 57

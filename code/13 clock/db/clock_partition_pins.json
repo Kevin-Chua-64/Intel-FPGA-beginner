@@ -1,0 +1,113 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Buzzer_Out",
+					"strict" : false
+				},
+				{
+					"name" : "Digitron_Out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Digitron_Out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Digitron_Out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Digitron_Out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Digitron_Out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Digitron_Out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Digitron_Out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DigitronCS_Out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DigitronCS_Out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DigitronCS_Out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DigitronCS_Out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DigOutA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DigOutA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DigOutA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DigOutA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DigOutB[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DigOutB[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DigOutB[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DigOutB[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DispDay",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "Rstn",
+					"strict" : false
+				},
+				{
+					"name" : "AdjustDay",
+					"strict" : false
+				},
+				{
+					"name" : "AdjustHour",
+					"strict" : false
+				},
+				{
+					"name" : "AdjustMin",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,41 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "LED_Out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_Out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_Out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_Out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_Out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_Out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SW_In[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SW_In[1]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

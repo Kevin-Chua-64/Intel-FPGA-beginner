@@ -1,0 +1,22 @@
+module encode_module(x, y);
+
+	input CLK;
+	input x[7:0];
+	output reg y[7:0];
+	
+	always @ (posedge CLK)
+		case(x)
+			8'd0: y <= 3'b000;
+			8'd1: y <= 3'b001;
+			8'd2: y <= 3'b010;
+			8'd3: y <= 3'b011;
+			8'd4: y <= 3'b100;
+			8'd5: y <= 3'b101;
+			8'd6: y <= 3'b110;
+			8'd7: y <= 3'b111;
+			default: y <= 8'b1111_1111;
+		endcase
+	end
+
+endmodule
+			

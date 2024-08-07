@@ -1,0 +1,59 @@
+|counter
+CLK => CLK.IN1
+Rstn => Rstn.IN1
+DigOutA[0] << count_module:U1.result
+DigOutA[1] << count_module:U1.result
+DigOutA[2] << count_module:U1.result
+DigOutA[3] << count_module:U1.result
+DigOutB[0] << count_module:U1.result
+DigOutB[1] << count_module:U1.result
+DigOutB[2] << count_module:U1.result
+DigOutB[3] << count_module:U1.result
+
+
+|counter|count_module:U1
+CLK => Count[0].CLK
+CLK => Count[1].CLK
+CLK => Count[2].CLK
+CLK => Count[3].CLK
+CLK => Count[4].CLK
+CLK => Count[5].CLK
+CLK => Count[6].CLK
+CLK => Count[7].CLK
+CLK => Count[8].CLK
+CLK => Count[9].CLK
+CLK => Count[10].CLK
+CLK => Count[11].CLK
+CLK => Count[12].CLK
+CLK => Count[13].CLK
+CLK => Count[14].CLK
+CLK => Count[15].CLK
+CLK => Count[16].CLK
+CLK => Count[17].CLK
+CLK => Count[18].CLK
+CLK => Count[19].CLK
+CLK => Count[20].CLK
+CLK => Count[21].CLK
+CLK => Count[22].CLK
+CLK => Count[23].CLK
+CLK => Count[24].CLK
+CLK => Count[25].CLK
+CLK => CLK1.CLK
+Rstn => result[0]~reg0.ACLR
+Rstn => result[1]~reg0.ACLR
+Rstn => result[2]~reg0.ACLR
+Rstn => result[3]~reg0.ACLR
+Rstn => result[4]~reg0.ACLR
+Rstn => result[5]~reg0.ACLR
+Rstn => result[6]~reg0.ACLR
+Rstn => result[7]~reg0.ACLR
+result[0] <= result[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= result[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= result[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= result[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= result[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

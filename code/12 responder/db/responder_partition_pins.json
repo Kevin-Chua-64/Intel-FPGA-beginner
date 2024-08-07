@@ -1,0 +1,113 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "LED_Out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_Out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_Out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_Out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Buzzer_Out",
+					"strict" : false
+				},
+				{
+					"name" : "LED_OverTime_Out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_OverTime_Out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_OverTime_Out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LED_OverTime_Out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Digitron_Out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Digitron_Out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Digitron_Out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Digitron_Out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Digitron_Out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Digitron_Out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Digitron_Out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DigitronCS_Out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DigitronCS_Out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DigitronCS_Out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Key_In[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "Rstn",
+					"strict" : false
+				},
+				{
+					"name" : "Start",
+					"strict" : false
+				},
+				{
+					"name" : "Key_In[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Key_In[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Key_In[2]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

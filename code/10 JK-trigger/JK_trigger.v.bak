@@ -1,0 +1,7 @@
+module JK_trigger(CLK, Setn, Clrn, SW_In, LED_Out);
+
+	input CLK, Setn, cLrn;
+	input [7:0]SW_In;
+	output [7:0]LED_Out;
+	
+endmodule

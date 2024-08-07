@@ -1,0 +1,153 @@
+// Copyright (C) 2017  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+
+// 
+// Device: Altera EP4CE55F23I7 Package FBGA484
+// 
+
+//
+// This file contains Fast Corner delays for the design using part EP4CE55F23I7,
+// with speed grade M, core voltage 1.2VmV, and temperature -40 Celsius
+//
+
+// 
+// This SDF file should be used for ModelSim (Verilog) only
+// 
+
+(DELAYFILE
+  (SDFVERSION "2.1")
+  (DESIGN "gate")
+  (DATE "08/30/2022 16:03:43")
+  (VENDOR "Altera")
+  (PROGRAM "Quartus Prime")
+  (VERSION "Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition")
+  (DIVIDER .)
+  (TIMESCALE 1 ps)
+
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE LED_Out\[0\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (310:310:310) (348:348:348))
+        (IOPATH i o (2275:2275:2275) (2358:2358:2358))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE LED_Out\[1\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (335:335:335) (300:300:300))
+        (IOPATH i o (1537:1537:1537) (1512:1512:1512))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE LED_Out\[2\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (161:161:161) (182:182:182))
+        (IOPATH i o (1472:1472:1472) (1497:1497:1497))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE LED_Out\[3\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (377:377:377) (332:332:332))
+        (IOPATH i o (1547:1547:1547) (1522:1522:1522))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE LED_Out\[4\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (158:158:158) (178:178:178))
+        (IOPATH i o (1482:1482:1482) (1507:1507:1507))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE LED_Out\[5\]\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (454:454:454) (417:417:417))
+        (IOPATH i o (1517:1517:1517) (1492:1492:1492))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE SW_In\[0\]\~input)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (298:298:298) (671:671:671))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE SW_In\[1\]\~input)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (288:288:288) (661:661:661))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE U1\|Gate_Out\[0\])
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (1813:1813:1813) (2051:2051:2051))
+        (PORT datac (1804:1804:1804) (2043:2043:2043))
+        (IOPATH datab combout (158:158:158) (156:156:156))
+        (IOPATH datac combout (114:114:114) (117:117:117))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE U1\|Gate_Out\[2\])
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (1814:1814:1814) (2051:2051:2051))
+        (PORT datac (1804:1804:1804) (2043:2043:2043))
+        (IOPATH datab combout (158:158:158) (156:156:156))
+        (IOPATH datac combout (114:114:114) (117:117:117))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE U1\|Gate_Out\[4\])
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (1814:1814:1814) (2052:2052:2052))
+        (PORT datac (1804:1804:1804) (2042:2042:2042))
+        (IOPATH datab combout (185:185:185) (193:193:193))
+        (IOPATH datac combout (114:114:114) (118:118:118))
+      )
+    )
+  )
+)
