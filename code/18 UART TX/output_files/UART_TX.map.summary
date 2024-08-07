@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Sep 27 22:30:20 2022
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Revision Name : UART_TX
+Top-level Entity Name : UART_TX
+Family : Cyclone IV E
+Total logic elements : 1,166
+    Total combinational functions : 852
+    Dedicated logic registers : 746
+Total registers : 746
+Total pins : 3
+Total virtual pins : 0
+Total memory bits : 1,441,792
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

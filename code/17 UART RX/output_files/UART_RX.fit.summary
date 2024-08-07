@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Sep 20 20:54:28 2022
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Revision Name : UART_RX
+Top-level Entity Name : UART_RX
+Family : Cyclone IV E
+Device : EP4CE55F23I7
+Timing Models : Final
+Total logic elements : 69 / 55,856 ( < 1 % )
+    Total combinational functions : 61 / 55,856 ( < 1 % )
+    Dedicated logic registers : 37 / 55,856 ( < 1 % )
+Total registers : 37
+Total pins : 12 / 325 ( 4 % )
+Total virtual pins : 0
+Total memory bits : 0 / 2,396,160 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 308 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

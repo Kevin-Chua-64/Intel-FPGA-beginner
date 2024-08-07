@@ -1,0 +1,1215 @@
+TimeQuest Timing Analyzer report for UART_RX
+Tue Sep 20 20:54:35 2022
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 100C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 100C Model Setup Summary
+  8. Slow 1200mV 100C Model Hold Summary
+  9. Slow 1200mV 100C Model Recovery Summary
+ 10. Slow 1200mV 100C Model Removal Summary
+ 11. Slow 1200mV 100C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 100C Model Setup: 'CLK'
+ 13. Slow 1200mV 100C Model Hold: 'CLK'
+ 14. Slow 1200mV 100C Model Metastability Summary
+ 15. Slow 1200mV -40C Model Fmax Summary
+ 16. Slow 1200mV -40C Model Setup Summary
+ 17. Slow 1200mV -40C Model Hold Summary
+ 18. Slow 1200mV -40C Model Recovery Summary
+ 19. Slow 1200mV -40C Model Removal Summary
+ 20. Slow 1200mV -40C Model Minimum Pulse Width Summary
+ 21. Slow 1200mV -40C Model Setup: 'CLK'
+ 22. Slow 1200mV -40C Model Hold: 'CLK'
+ 23. Slow 1200mV -40C Model Metastability Summary
+ 24. Fast 1200mV -40C Model Setup Summary
+ 25. Fast 1200mV -40C Model Hold Summary
+ 26. Fast 1200mV -40C Model Recovery Summary
+ 27. Fast 1200mV -40C Model Removal Summary
+ 28. Fast 1200mV -40C Model Minimum Pulse Width Summary
+ 29. Fast 1200mV -40C Model Setup: 'CLK'
+ 30. Fast 1200mV -40C Model Hold: 'CLK'
+ 31. Fast 1200mV -40C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1200mv n40c Model)
+ 36. Signal Integrity Metrics (Slow 1200mv 100c Model)
+ 37. Signal Integrity Metrics (Fast 1200mv n40c Model)
+ 38. Setup Transfers
+ 39. Hold Transfers
+ 40. Report TCCS
+ 41. Report RSKM
+ 42. Unconstrained Paths Summary
+ 43. Clock Status Summary
+ 44. Unconstrained Input Ports
+ 45. Unconstrained Output Ports
+ 46. Unconstrained Input Ports
+ 47. Unconstrained Output Ports
+ 48. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                               ;
++-----------------------+---------------------------------------------------------+
+; Quartus Prime Version ; Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition ;
+; Timing Analyzer       ; TimeQuest                                               ;
+; Revision Name         ; UART_RX                                                 ;
+; Device Family         ; Cyclone IV E                                            ;
+; Device Name           ; EP4CE55F23I7                                            ;
+; Timing Models         ; Final                                                   ;
+; Delay Model           ; Combined                                                ;
+; Rise/Fall Delays      ; Enabled                                                 ;
++-----------------------+---------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.3%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; CLK        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 100C Model Fmax Summary                                                                       ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 309.02 MHz ; 250.0 MHz       ; CLK        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++--------------------------------------+
+; Slow 1200mV 100C Model Setup Summary ;
++-------+--------+---------------------+
+; Clock ; Slack  ; End Point TNS       ;
++-------+--------+---------------------+
+; CLK   ; -2.236 ; -53.882             ;
++-------+--------+---------------------+
+
+
++-------------------------------------+
+; Slow 1200mV 100C Model Hold Summary ;
++-------+-------+---------------------+
+; Clock ; Slack ; End Point TNS       ;
++-------+-------+---------------------+
+; CLK   ; 0.396 ; 0.000               ;
++-------+-------+---------------------+
+
+
+-------------------------------------------
+; Slow 1200mV 100C Model Recovery Summary ;
+-------------------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Slow 1200mV 100C Model Removal Summary ;
+------------------------------------------
+No paths to report.
+
+
++----------------------------------------------------+
+; Slow 1200mV 100C Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------------------+
+; Clock ; Slack  ; End Point TNS                     ;
++-------+--------+-----------------------------------+
+; CLK   ; -3.000 ; -50.545                           ;
++-------+--------+-----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 100C Model Setup: 'CLK'                                                                                                            ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.236 ; rx_bps_module:U2|Count_BPS[10] ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 3.158      ;
+; -2.229 ; rx_bps_module:U2|Count_BPS[10] ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 3.151      ;
+; -2.197 ; rx_bps_module:U2|Count_BPS[6]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 3.119      ;
+; -2.190 ; rx_bps_module:U2|Count_BPS[6]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 3.112      ;
+; -2.127 ; rx_bps_module:U2|Count_BPS[7]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 3.049      ;
+; -2.120 ; rx_bps_module:U2|Count_BPS[7]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 3.042      ;
+; -2.073 ; rx_bps_module:U2|Count_BPS[11] ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.995      ;
+; -2.066 ; rx_bps_module:U2|Count_BPS[11] ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.988      ;
+; -2.066 ; rx_bps_module:U2|Count_BPS[2]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.988      ;
+; -2.059 ; rx_bps_module:U2|Count_BPS[2]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.981      ;
+; -2.003 ; rx_bps_module:U2|Count_BPS[10] ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.924      ;
+; -2.002 ; rx_bps_module:U2|Count_BPS[10] ; rx_control_module:U3|State[2]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.923      ;
+; -1.999 ; rx_bps_module:U2|Count_BPS[3]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.921      ;
+; -1.992 ; rx_bps_module:U2|Count_BPS[3]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.914      ;
+; -1.964 ; rx_bps_module:U2|Count_BPS[6]  ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.885      ;
+; -1.963 ; rx_bps_module:U2|Count_BPS[10] ; rx_control_module:U3|rData[7]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.884      ;
+; -1.963 ; rx_bps_module:U2|Count_BPS[10] ; rx_control_module:U3|rData[5]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.884      ;
+; -1.963 ; rx_bps_module:U2|Count_BPS[10] ; rx_control_module:U3|rData[1]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.884      ;
+; -1.963 ; rx_bps_module:U2|Count_BPS[6]  ; rx_control_module:U3|State[2]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.884      ;
+; -1.962 ; rx_bps_module:U2|Count_BPS[10] ; rx_control_module:U3|rData[6]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.883      ;
+; -1.941 ; rx_bps_module:U2|Count_BPS[0]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.863      ;
+; -1.934 ; rx_bps_module:U2|Count_BPS[0]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.856      ;
+; -1.924 ; rx_bps_module:U2|Count_BPS[6]  ; rx_control_module:U3|rData[7]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.845      ;
+; -1.924 ; rx_bps_module:U2|Count_BPS[6]  ; rx_control_module:U3|rData[5]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.845      ;
+; -1.924 ; rx_bps_module:U2|Count_BPS[6]  ; rx_control_module:U3|rData[1]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.845      ;
+; -1.923 ; rx_bps_module:U2|Count_BPS[6]  ; rx_control_module:U3|rData[6]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.844      ;
+; -1.910 ; rx_control_module:U3|State[1]  ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.471     ; 2.437      ;
+; -1.909 ; rx_control_module:U3|State[1]  ; rx_control_module:U3|State[2]  ; CLK          ; CLK         ; 1.000        ; -0.471     ; 2.436      ;
+; -1.907 ; rx_bps_module:U2|Count_BPS[9]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.829      ;
+; -1.906 ; rx_bps_module:U2|Count_BPS[4]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.828      ;
+; -1.900 ; rx_bps_module:U2|Count_BPS[9]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.822      ;
+; -1.899 ; rx_bps_module:U2|Count_BPS[4]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.821      ;
+; -1.894 ; rx_bps_module:U2|Count_BPS[7]  ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.815      ;
+; -1.893 ; rx_bps_module:U2|Count_BPS[7]  ; rx_control_module:U3|State[2]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.814      ;
+; -1.872 ; rx_control_module:U3|State[3]  ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.506     ; 2.364      ;
+; -1.867 ; rx_bps_module:U2|Count_BPS[1]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.789      ;
+; -1.860 ; rx_bps_module:U2|Count_BPS[1]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.782      ;
+; -1.854 ; rx_bps_module:U2|Count_BPS[7]  ; rx_control_module:U3|rData[7]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.775      ;
+; -1.854 ; rx_bps_module:U2|Count_BPS[7]  ; rx_control_module:U3|rData[5]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.775      ;
+; -1.854 ; rx_bps_module:U2|Count_BPS[7]  ; rx_control_module:U3|rData[1]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.775      ;
+; -1.853 ; rx_bps_module:U2|Count_BPS[7]  ; rx_control_module:U3|rData[6]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.774      ;
+; -1.852 ; rx_bps_module:U2|Count_BPS[2]  ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.773      ;
+; -1.851 ; rx_bps_module:U2|Count_BPS[2]  ; rx_control_module:U3|State[2]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.772      ;
+; -1.840 ; rx_bps_module:U2|Count_BPS[11] ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.761      ;
+; -1.839 ; rx_bps_module:U2|Count_BPS[11] ; rx_control_module:U3|State[2]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.760      ;
+; -1.819 ; rx_bps_module:U2|Count_BPS[2]  ; rx_control_module:U3|rData[7]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.740      ;
+; -1.819 ; rx_bps_module:U2|Count_BPS[2]  ; rx_control_module:U3|rData[6]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.740      ;
+; -1.818 ; rx_bps_module:U2|Count_BPS[2]  ; rx_control_module:U3|rData[5]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.739      ;
+; -1.818 ; rx_bps_module:U2|Count_BPS[2]  ; rx_control_module:U3|rData[1]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.739      ;
+; -1.816 ; rx_control_module:U3|State[3]  ; rx_control_module:U3|State[1]  ; CLK          ; CLK         ; 1.000        ; -0.126     ; 2.688      ;
+; -1.810 ; rx_bps_module:U2|Count_BPS[8]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.732      ;
+; -1.807 ; rx_bps_module:U2|Count_BPS[11] ; rx_control_module:U3|rData[7]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.728      ;
+; -1.807 ; rx_bps_module:U2|Count_BPS[11] ; rx_control_module:U3|rData[6]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.728      ;
+; -1.806 ; rx_bps_module:U2|Count_BPS[11] ; rx_control_module:U3|rData[5]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.727      ;
+; -1.806 ; rx_bps_module:U2|Count_BPS[11] ; rx_control_module:U3|rData[1]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.727      ;
+; -1.803 ; rx_bps_module:U2|Count_BPS[8]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.725      ;
+; -1.796 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[5]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.718      ;
+; -1.796 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[7]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.718      ;
+; -1.796 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[0]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.718      ;
+; -1.796 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[1]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.718      ;
+; -1.796 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[2]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.718      ;
+; -1.796 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[3]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.718      ;
+; -1.796 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[4]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.718      ;
+; -1.796 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[6]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.718      ;
+; -1.796 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[8]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.718      ;
+; -1.796 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[9]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.718      ;
+; -1.796 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[11] ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.718      ;
+; -1.796 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[10] ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.718      ;
+; -1.796 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[12] ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.718      ;
+; -1.792 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[5]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.714      ;
+; -1.792 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[7]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.714      ;
+; -1.792 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[0]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.714      ;
+; -1.792 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[1]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.714      ;
+; -1.792 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[2]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.714      ;
+; -1.792 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[3]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.714      ;
+; -1.792 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[4]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.714      ;
+; -1.792 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[6]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.714      ;
+; -1.792 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[8]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.714      ;
+; -1.792 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[9]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.714      ;
+; -1.792 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[11] ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.714      ;
+; -1.792 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[10] ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.714      ;
+; -1.792 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[12] ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.714      ;
+; -1.782 ; rx_bps_module:U2|Count_BPS[3]  ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.703      ;
+; -1.781 ; rx_bps_module:U2|Count_BPS[3]  ; rx_control_module:U3|State[2]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.702      ;
+; -1.749 ; rx_bps_module:U2|Count_BPS[3]  ; rx_control_module:U3|rData[7]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.670      ;
+; -1.749 ; rx_bps_module:U2|Count_BPS[3]  ; rx_control_module:U3|rData[6]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.670      ;
+; -1.748 ; rx_bps_module:U2|Count_BPS[3]  ; rx_control_module:U3|rData[5]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.669      ;
+; -1.748 ; rx_bps_module:U2|Count_BPS[3]  ; rx_control_module:U3|rData[1]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.669      ;
+; -1.748 ; rx_bps_module:U2|Count_BPS[10] ; rx_control_module:U3|State[1]  ; CLK          ; CLK         ; 1.000        ; 0.303      ; 3.049      ;
+; -1.743 ; rx_control_module:U3|State[3]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.505     ; 2.236      ;
+; -1.741 ; rx_control_module:U3|State[2]  ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.075     ; 2.664      ;
+; -1.738 ; rx_control_module:U3|State[1]  ; rx_control_module:U3|State[1]  ; CLK          ; CLK         ; 1.000        ; -0.091     ; 2.645      ;
+; -1.735 ; rx_control_module:U3|State[3]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.505     ; 2.228      ;
+; -1.730 ; rx_control_module:U3|State[0]  ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.075     ; 2.653      ;
+; -1.729 ; rx_control_module:U3|State[0]  ; rx_control_module:U3|State[2]  ; CLK          ; CLK         ; 1.000        ; -0.075     ; 2.652      ;
+; -1.717 ; rx_control_module:U3|State[2]  ; rx_control_module:U3|State[1]  ; CLK          ; CLK         ; 1.000        ; 0.305      ; 3.020      ;
+; -1.709 ; rx_bps_module:U2|Count_BPS[6]  ; rx_control_module:U3|State[1]  ; CLK          ; CLK         ; 1.000        ; 0.303      ; 3.010      ;
+; -1.708 ; rx_bps_module:U2|Count_BPS[0]  ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.629      ;
+; -1.707 ; rx_bps_module:U2|Count_BPS[0]  ; rx_control_module:U3|State[2]  ; CLK          ; CLK         ; 1.000        ; -0.077     ; 2.628      ;
+; -1.705 ; rx_bps_module:U2|Count_BPS[9]  ; rx_bps_module:U2|Count_BPS[5]  ; CLK          ; CLK         ; 1.000        ; -0.076     ; 2.627      ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 100C Model Hold: 'CLK'                                                                                                            ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.396 ; rx_control_module:U3|rData[2]  ; rx_control_module:U3|rData[2]  ; CLK          ; CLK         ; 0.000        ; 0.092      ; 0.674      ;
+; 0.396 ; rx_control_module:U3|rData[0]  ; rx_control_module:U3|rData[0]  ; CLK          ; CLK         ; 0.000        ; 0.092      ; 0.674      ;
+; 0.396 ; rx_control_module:U3|State[3]  ; rx_control_module:U3|State[3]  ; CLK          ; CLK         ; 0.000        ; 0.092      ; 0.674      ;
+; 0.397 ; rx_control_module:U3|State[1]  ; rx_control_module:U3|State[1]  ; CLK          ; CLK         ; 0.000        ; 0.091      ; 0.674      ;
+; 0.412 ; rx_control_module:U3|rData[4]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 0.674      ;
+; 0.412 ; rx_control_module:U3|rData[3]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 0.674      ;
+; 0.412 ; rx_control_module:U3|isDone    ; rx_control_module:U3|isDone    ; CLK          ; CLK         ; 0.000        ; 0.076      ; 0.674      ;
+; 0.412 ; rx_control_module:U3|isCount   ; rx_control_module:U3|isCount   ; CLK          ; CLK         ; 0.000        ; 0.076      ; 0.674      ;
+; 0.413 ; rx_control_module:U3|rData[7]  ; rx_control_module:U3|rData[7]  ; CLK          ; CLK         ; 0.000        ; 0.075      ; 0.674      ;
+; 0.413 ; rx_control_module:U3|rData[6]  ; rx_control_module:U3|rData[6]  ; CLK          ; CLK         ; 0.000        ; 0.075      ; 0.674      ;
+; 0.413 ; rx_control_module:U3|rData[5]  ; rx_control_module:U3|rData[5]  ; CLK          ; CLK         ; 0.000        ; 0.075      ; 0.674      ;
+; 0.413 ; rx_control_module:U3|rData[1]  ; rx_control_module:U3|rData[1]  ; CLK          ; CLK         ; 0.000        ; 0.075      ; 0.674      ;
+; 0.413 ; rx_control_module:U3|State[2]  ; rx_control_module:U3|State[2]  ; CLK          ; CLK         ; 0.000        ; 0.075      ; 0.674      ;
+; 0.413 ; rx_control_module:U3|State[0]  ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 0.000        ; 0.075      ; 0.674      ;
+; 0.435 ; rx_control_module:U3|rData[4]  ; display_module:U4|rLED_Out[4]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 0.697      ;
+; 0.438 ; rx_control_module:U3|rData[3]  ; display_module:U4|rLED_Out[3]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 0.700      ;
+; 0.457 ; rx_bps_module:U2|Count_BPS[12] ; rx_bps_module:U2|Count_BPS[12] ; CLK          ; CLK         ; 0.000        ; 0.076      ; 0.719      ;
+; 0.665 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[1]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 0.927      ;
+; 0.668 ; rx_bps_module:U2|Count_BPS[7]  ; rx_bps_module:U2|Count_BPS[7]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 0.930      ;
+; 0.668 ; rx_bps_module:U2|Count_BPS[4]  ; rx_bps_module:U2|Count_BPS[4]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 0.930      ;
+; 0.671 ; rx_bps_module:U2|Count_BPS[2]  ; rx_bps_module:U2|Count_BPS[2]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 0.933      ;
+; 0.671 ; rx_bps_module:U2|Count_BPS[8]  ; rx_bps_module:U2|Count_BPS[8]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 0.933      ;
+; 0.673 ; rx_bps_module:U2|Count_BPS[9]  ; rx_bps_module:U2|Count_BPS[9]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 0.935      ;
+; 0.674 ; rx_bps_module:U2|Count_BPS[11] ; rx_bps_module:U2|Count_BPS[11] ; CLK          ; CLK         ; 0.000        ; 0.076      ; 0.936      ;
+; 0.675 ; rx_control_module:U3|State[2]  ; rx_control_module:U3|rData[0]  ; CLK          ; CLK         ; 0.000        ; 0.506      ; 1.367      ;
+; 0.679 ; rx_bps_module:U2|Count_BPS[6]  ; rx_bps_module:U2|Count_BPS[6]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 0.941      ;
+; 0.687 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[3]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 0.949      ;
+; 0.690 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[5]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 0.952      ;
+; 0.693 ; rx_bps_module:U2|Count_BPS[10] ; rx_bps_module:U2|Count_BPS[10] ; CLK          ; CLK         ; 0.000        ; 0.076      ; 0.955      ;
+; 0.694 ; rx_bps_module:U2|Count_BPS[0]  ; rx_bps_module:U2|Count_BPS[0]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 0.956      ;
+; 0.709 ; rx_control_module:U3|State[2]  ; rx_control_module:U3|rData[5]  ; CLK          ; CLK         ; 0.000        ; 0.075      ; 0.970      ;
+; 0.728 ; rx_control_module:U3|State[0]  ; rx_control_module:U3|rData[7]  ; CLK          ; CLK         ; 0.000        ; 0.075      ; 0.989      ;
+; 0.730 ; rx_control_module:U3|State[2]  ; rx_control_module:U3|rData[1]  ; CLK          ; CLK         ; 0.000        ; 0.075      ; 0.991      ;
+; 0.744 ; rx_control_module:U3|State[0]  ; rx_control_module:U3|rData[6]  ; CLK          ; CLK         ; 0.000        ; 0.075      ; 1.005      ;
+; 0.796 ; detect_module:U1|neg1          ; detect_module:U1|neg2          ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.058      ;
+; 0.841 ; rx_control_module:U3|rData[1]  ; display_module:U4|rLED_Out[1]  ; CLK          ; CLK         ; 0.000        ; 0.077      ; 1.104      ;
+; 0.867 ; rx_control_module:U3|rData[5]  ; display_module:U4|rLED_Out[5]  ; CLK          ; CLK         ; 0.000        ; 0.077      ; 1.130      ;
+; 0.982 ; rx_control_module:U3|State[0]  ; rx_control_module:U3|rData[0]  ; CLK          ; CLK         ; 0.000        ; 0.506      ; 1.674      ;
+; 0.984 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[2]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.246      ;
+; 0.987 ; rx_bps_module:U2|Count_BPS[7]  ; rx_bps_module:U2|Count_BPS[8]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.249      ;
+; 0.992 ; rx_bps_module:U2|Count_BPS[9]  ; rx_bps_module:U2|Count_BPS[10] ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.254      ;
+; 0.993 ; rx_bps_module:U2|Count_BPS[11] ; rx_bps_module:U2|Count_BPS[12] ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.255      ;
+; 0.995 ; rx_control_module:U3|rData[7]  ; display_module:U4|rLED_Out[7]  ; CLK          ; CLK         ; 0.000        ; 0.075      ; 1.256      ;
+; 0.998 ; rx_bps_module:U2|Count_BPS[4]  ; rx_bps_module:U2|Count_BPS[5]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.260      ;
+; 1.001 ; rx_bps_module:U2|Count_BPS[0]  ; rx_bps_module:U2|Count_BPS[1]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.263      ;
+; 1.002 ; rx_bps_module:U2|Count_BPS[4]  ; rx_bps_module:U2|Count_BPS[6]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.264      ;
+; 1.002 ; rx_bps_module:U2|Count_BPS[8]  ; rx_bps_module:U2|Count_BPS[9]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.264      ;
+; 1.002 ; rx_bps_module:U2|Count_BPS[2]  ; rx_bps_module:U2|Count_BPS[3]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.264      ;
+; 1.005 ; rx_bps_module:U2|Count_BPS[0]  ; rx_bps_module:U2|Count_BPS[2]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.267      ;
+; 1.006 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[4]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.268      ;
+; 1.006 ; rx_bps_module:U2|Count_BPS[8]  ; rx_bps_module:U2|Count_BPS[10] ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.268      ;
+; 1.006 ; rx_bps_module:U2|Count_BPS[2]  ; rx_bps_module:U2|Count_BPS[4]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.268      ;
+; 1.009 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[6]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.271      ;
+; 1.010 ; rx_bps_module:U2|Count_BPS[6]  ; rx_bps_module:U2|Count_BPS[7]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.272      ;
+; 1.014 ; rx_bps_module:U2|Count_BPS[6]  ; rx_bps_module:U2|Count_BPS[8]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.276      ;
+; 1.024 ; rx_bps_module:U2|Count_BPS[10] ; rx_bps_module:U2|Count_BPS[11] ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.286      ;
+; 1.028 ; rx_bps_module:U2|Count_BPS[10] ; rx_bps_module:U2|Count_BPS[12] ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.290      ;
+; 1.064 ; rx_control_module:U3|rData[6]  ; display_module:U4|rLED_Out[6]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.326      ;
+; 1.067 ; rx_control_module:U3|State[2]  ; rx_control_module:U3|rData[2]  ; CLK          ; CLK         ; 0.000        ; 0.506      ; 1.759      ;
+; 1.089 ; rx_control_module:U3|isDone    ; display_module:U4|rLED_Out[5]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.351      ;
+; 1.089 ; rx_control_module:U3|isDone    ; display_module:U4|rLED_Out[4]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.351      ;
+; 1.089 ; rx_control_module:U3|isDone    ; display_module:U4|rLED_Out[3]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.351      ;
+; 1.089 ; rx_control_module:U3|isDone    ; display_module:U4|rLED_Out[2]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.351      ;
+; 1.089 ; rx_control_module:U3|isDone    ; display_module:U4|rLED_Out[1]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.351      ;
+; 1.089 ; rx_control_module:U3|isDone    ; display_module:U4|rLED_Out[0]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.351      ;
+; 1.108 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[3]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.370      ;
+; 1.111 ; rx_bps_module:U2|Count_BPS[7]  ; rx_bps_module:U2|Count_BPS[9]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.373      ;
+; 1.112 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[4]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.374      ;
+; 1.115 ; rx_bps_module:U2|Count_BPS[7]  ; rx_bps_module:U2|Count_BPS[10] ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.377      ;
+; 1.116 ; rx_bps_module:U2|Count_BPS[9]  ; rx_bps_module:U2|Count_BPS[11] ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.378      ;
+; 1.120 ; rx_bps_module:U2|Count_BPS[9]  ; rx_bps_module:U2|Count_BPS[12] ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.382      ;
+; 1.126 ; rx_bps_module:U2|Count_BPS[4]  ; rx_bps_module:U2|Count_BPS[7]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.388      ;
+; 1.129 ; rx_bps_module:U2|Count_BPS[0]  ; rx_bps_module:U2|Count_BPS[3]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.391      ;
+; 1.130 ; rx_control_module:U3|State[2]  ; rx_control_module:U3|State[1]  ; CLK          ; CLK         ; 0.000        ; 0.471      ; 1.787      ;
+; 1.130 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[5]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.392      ;
+; 1.130 ; rx_bps_module:U2|Count_BPS[4]  ; rx_bps_module:U2|Count_BPS[8]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.392      ;
+; 1.130 ; rx_bps_module:U2|Count_BPS[8]  ; rx_bps_module:U2|Count_BPS[11] ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.392      ;
+; 1.130 ; rx_bps_module:U2|Count_BPS[2]  ; rx_bps_module:U2|Count_BPS[5]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.392      ;
+; 1.131 ; rx_control_module:U3|State[0]  ; rx_control_module:U3|rData[2]  ; CLK          ; CLK         ; 0.000        ; 0.506      ; 1.823      ;
+; 1.133 ; rx_bps_module:U2|Count_BPS[0]  ; rx_bps_module:U2|Count_BPS[4]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.395      ;
+; 1.133 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[7]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.395      ;
+; 1.134 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[6]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.396      ;
+; 1.134 ; rx_bps_module:U2|Count_BPS[8]  ; rx_bps_module:U2|Count_BPS[12] ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.396      ;
+; 1.134 ; rx_bps_module:U2|Count_BPS[2]  ; rx_bps_module:U2|Count_BPS[6]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.396      ;
+; 1.137 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[8]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.399      ;
+; 1.138 ; rx_bps_module:U2|Count_BPS[6]  ; rx_bps_module:U2|Count_BPS[9]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.400      ;
+; 1.142 ; rx_bps_module:U2|Count_BPS[6]  ; rx_bps_module:U2|Count_BPS[10] ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.404      ;
+; 1.144 ; rx_control_module:U3|State[2]  ; rx_control_module:U3|rData[7]  ; CLK          ; CLK         ; 0.000        ; 0.075      ; 1.405      ;
+; 1.144 ; rx_control_module:U3|State[2]  ; rx_control_module:U3|rData[6]  ; CLK          ; CLK         ; 0.000        ; 0.075      ; 1.405      ;
+; 1.165 ; rx_control_module:U3|State[0]  ; rx_control_module:U3|State[1]  ; CLK          ; CLK         ; 0.000        ; 0.471      ; 1.822      ;
+; 1.165 ; rx_control_module:U3|State[0]  ; rx_control_module:U3|rData[5]  ; CLK          ; CLK         ; 0.000        ; 0.075      ; 1.426      ;
+; 1.166 ; rx_control_module:U3|State[0]  ; rx_control_module:U3|rData[1]  ; CLK          ; CLK         ; 0.000        ; 0.075      ; 1.427      ;
+; 1.230 ; rx_control_module:U3|rData[2]  ; display_module:U4|rLED_Out[2]  ; CLK          ; CLK         ; 0.000        ; -0.337     ; 1.079      ;
+; 1.234 ; rx_control_module:U3|State[1]  ; rx_control_module:U3|rData[0]  ; CLK          ; CLK         ; 0.000        ; 0.126      ; 1.546      ;
+; 1.236 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[5]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.498      ;
+; 1.239 ; rx_bps_module:U2|Count_BPS[7]  ; rx_bps_module:U2|Count_BPS[11] ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.501      ;
+; 1.240 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[6]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.502      ;
+; 1.243 ; rx_bps_module:U2|Count_BPS[7]  ; rx_bps_module:U2|Count_BPS[12] ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.505      ;
+; 1.253 ; rx_control_module:U3|rData[0]  ; display_module:U4|rLED_Out[0]  ; CLK          ; CLK         ; 0.000        ; -0.337     ; 1.102      ;
+; 1.254 ; rx_bps_module:U2|Count_BPS[4]  ; rx_bps_module:U2|Count_BPS[9]  ; CLK          ; CLK         ; 0.000        ; 0.076      ; 1.516      ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+------------------------------------------------
+; Slow 1200mV 100C Model Metastability Summary ;
+------------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV -40C Model Fmax Summary                                                                       ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 354.11 MHz ; 250.0 MHz       ; CLK        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------------+
+; Slow 1200mV -40C Model Setup Summary ;
++-------+--------+---------------------+
+; Clock ; Slack  ; End Point TNS       ;
++-------+--------+---------------------+
+; CLK   ; -1.824 ; -43.669             ;
++-------+--------+---------------------+
+
+
++-------------------------------------+
+; Slow 1200mV -40C Model Hold Summary ;
++-------+-------+---------------------+
+; Clock ; Slack ; End Point TNS       ;
++-------+-------+---------------------+
+; CLK   ; 0.326 ; 0.000               ;
++-------+-------+---------------------+
+
+
+-------------------------------------------
+; Slow 1200mV -40C Model Recovery Summary ;
+-------------------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Slow 1200mV -40C Model Removal Summary ;
+------------------------------------------
+No paths to report.
+
+
++----------------------------------------------------+
+; Slow 1200mV -40C Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------------------+
+; Clock ; Slack  ; End Point TNS                     ;
++-------+--------+-----------------------------------+
+; CLK   ; -3.000 ; -50.545                           ;
++-------+--------+-----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV -40C Model Setup: 'CLK'                                                                                                            ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.824 ; rx_bps_module:U2|Count_BPS[10] ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.064     ; 2.760      ;
+; -1.818 ; rx_bps_module:U2|Count_BPS[10] ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.064     ; 2.754      ;
+; -1.791 ; rx_bps_module:U2|Count_BPS[6]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.064     ; 2.727      ;
+; -1.785 ; rx_bps_module:U2|Count_BPS[6]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.064     ; 2.721      ;
+; -1.740 ; rx_bps_module:U2|Count_BPS[2]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.064     ; 2.676      ;
+; -1.740 ; rx_bps_module:U2|Count_BPS[7]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.064     ; 2.676      ;
+; -1.734 ; rx_bps_module:U2|Count_BPS[2]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.064     ; 2.670      ;
+; -1.734 ; rx_bps_module:U2|Count_BPS[7]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.064     ; 2.670      ;
+; -1.732 ; rx_bps_module:U2|Count_BPS[11] ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.064     ; 2.668      ;
+; -1.726 ; rx_bps_module:U2|Count_BPS[11] ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.064     ; 2.662      ;
+; -1.692 ; rx_bps_module:U2|Count_BPS[3]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.064     ; 2.628      ;
+; -1.686 ; rx_bps_module:U2|Count_BPS[3]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.064     ; 2.622      ;
+; -1.671 ; rx_bps_module:U2|Count_BPS[10] ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.605      ;
+; -1.670 ; rx_bps_module:U2|Count_BPS[10] ; rx_control_module:U3|State[2]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.604      ;
+; -1.622 ; rx_bps_module:U2|Count_BPS[10] ; rx_control_module:U3|rData[7]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.556      ;
+; -1.621 ; rx_bps_module:U2|Count_BPS[10] ; rx_control_module:U3|rData[6]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.555      ;
+; -1.620 ; rx_bps_module:U2|Count_BPS[10] ; rx_control_module:U3|rData[1]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.554      ;
+; -1.620 ; rx_bps_module:U2|Count_BPS[6]  ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.554      ;
+; -1.619 ; rx_bps_module:U2|Count_BPS[10] ; rx_control_module:U3|rData[5]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.553      ;
+; -1.619 ; rx_bps_module:U2|Count_BPS[6]  ; rx_control_module:U3|State[2]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.553      ;
+; -1.591 ; rx_bps_module:U2|Count_BPS[0]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.064     ; 2.527      ;
+; -1.585 ; rx_bps_module:U2|Count_BPS[0]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.064     ; 2.521      ;
+; -1.583 ; rx_bps_module:U2|Count_BPS[9]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.064     ; 2.519      ;
+; -1.577 ; rx_bps_module:U2|Count_BPS[9]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.064     ; 2.513      ;
+; -1.571 ; rx_bps_module:U2|Count_BPS[6]  ; rx_control_module:U3|rData[7]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.505      ;
+; -1.570 ; rx_bps_module:U2|Count_BPS[6]  ; rx_control_module:U3|rData[6]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.504      ;
+; -1.569 ; rx_bps_module:U2|Count_BPS[6]  ; rx_control_module:U3|rData[1]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.503      ;
+; -1.568 ; rx_bps_module:U2|Count_BPS[6]  ; rx_control_module:U3|rData[5]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.502      ;
+; -1.542 ; rx_bps_module:U2|Count_BPS[4]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.064     ; 2.478      ;
+; -1.536 ; rx_bps_module:U2|Count_BPS[4]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.064     ; 2.472      ;
+; -1.525 ; rx_bps_module:U2|Count_BPS[11] ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.459      ;
+; -1.524 ; rx_bps_module:U2|Count_BPS[11] ; rx_control_module:U3|State[2]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.458      ;
+; -1.517 ; rx_bps_module:U2|Count_BPS[2]  ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.451      ;
+; -1.516 ; rx_bps_module:U2|Count_BPS[2]  ; rx_control_module:U3|State[2]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.450      ;
+; -1.514 ; rx_bps_module:U2|Count_BPS[1]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.064     ; 2.450      ;
+; -1.508 ; rx_bps_module:U2|Count_BPS[1]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.064     ; 2.444      ;
+; -1.505 ; rx_control_module:U3|State[3]  ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.449     ; 2.056      ;
+; -1.501 ; rx_bps_module:U2|Count_BPS[7]  ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.435      ;
+; -1.500 ; rx_bps_module:U2|Count_BPS[7]  ; rx_control_module:U3|State[2]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.434      ;
+; -1.496 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[5]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.431      ;
+; -1.496 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[7]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.431      ;
+; -1.496 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[0]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.431      ;
+; -1.496 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[1]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.431      ;
+; -1.496 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[2]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.431      ;
+; -1.496 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[3]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.431      ;
+; -1.496 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[4]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.431      ;
+; -1.496 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[6]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.431      ;
+; -1.496 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[8]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.431      ;
+; -1.496 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[9]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.431      ;
+; -1.496 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[11] ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.431      ;
+; -1.496 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[10] ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.431      ;
+; -1.496 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[12] ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.431      ;
+; -1.489 ; rx_control_module:U3|State[1]  ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.415     ; 2.074      ;
+; -1.488 ; rx_control_module:U3|State[1]  ; rx_control_module:U3|State[2]  ; CLK          ; CLK         ; 1.000        ; -0.415     ; 2.073      ;
+; -1.485 ; rx_bps_module:U2|Count_BPS[10] ; rx_control_module:U3|State[1]  ; CLK          ; CLK         ; 1.000        ; 0.270      ; 2.755      ;
+; -1.477 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[5]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.412      ;
+; -1.477 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[7]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.412      ;
+; -1.477 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[0]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.412      ;
+; -1.477 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[1]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.412      ;
+; -1.477 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[2]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.412      ;
+; -1.477 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[3]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.412      ;
+; -1.477 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[4]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.412      ;
+; -1.477 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[6]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.412      ;
+; -1.477 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[8]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.412      ;
+; -1.477 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[9]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.412      ;
+; -1.477 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[11] ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.412      ;
+; -1.477 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[10] ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.412      ;
+; -1.477 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[12] ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.412      ;
+; -1.476 ; rx_bps_module:U2|Count_BPS[11] ; rx_control_module:U3|rData[7]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.410      ;
+; -1.475 ; rx_bps_module:U2|Count_BPS[11] ; rx_control_module:U3|rData[6]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.409      ;
+; -1.474 ; rx_bps_module:U2|Count_BPS[11] ; rx_control_module:U3|rData[1]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.408      ;
+; -1.473 ; rx_bps_module:U2|Count_BPS[11] ; rx_control_module:U3|rData[5]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.407      ;
+; -1.471 ; rx_bps_module:U2|Count_BPS[3]  ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.405      ;
+; -1.470 ; rx_bps_module:U2|Count_BPS[8]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.064     ; 2.406      ;
+; -1.470 ; rx_bps_module:U2|Count_BPS[3]  ; rx_control_module:U3|State[2]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.404      ;
+; -1.468 ; rx_bps_module:U2|Count_BPS[2]  ; rx_control_module:U3|rData[7]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.402      ;
+; -1.467 ; rx_bps_module:U2|Count_BPS[2]  ; rx_control_module:U3|rData[6]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.401      ;
+; -1.466 ; rx_bps_module:U2|Count_BPS[2]  ; rx_control_module:U3|rData[1]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.400      ;
+; -1.465 ; rx_bps_module:U2|Count_BPS[2]  ; rx_control_module:U3|rData[5]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.399      ;
+; -1.464 ; rx_bps_module:U2|Count_BPS[8]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.064     ; 2.400      ;
+; -1.456 ; rx_bps_module:U2|Count_BPS[7]  ; rx_control_module:U3|rData[7]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.390      ;
+; -1.455 ; rx_bps_module:U2|Count_BPS[7]  ; rx_control_module:U3|rData[6]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.389      ;
+; -1.455 ; rx_bps_module:U2|Count_BPS[7]  ; rx_control_module:U3|rData[1]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.389      ;
+; -1.454 ; rx_bps_module:U2|Count_BPS[7]  ; rx_control_module:U3|rData[5]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.388      ;
+; -1.436 ; rx_control_module:U3|State[3]  ; rx_control_module:U3|State[1]  ; CLK          ; CLK         ; 1.000        ; -0.113     ; 2.323      ;
+; -1.434 ; rx_bps_module:U2|Count_BPS[6]  ; rx_control_module:U3|State[1]  ; CLK          ; CLK         ; 1.000        ; 0.270      ; 2.704      ;
+; -1.424 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[5]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.359      ;
+; -1.424 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[7]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.359      ;
+; -1.424 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[0]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.359      ;
+; -1.424 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[1]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.359      ;
+; -1.424 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[2]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.359      ;
+; -1.424 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[3]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.359      ;
+; -1.424 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[4]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.359      ;
+; -1.424 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[6]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.359      ;
+; -1.424 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[8]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.359      ;
+; -1.424 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[9]  ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.359      ;
+; -1.424 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[11] ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.359      ;
+; -1.424 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[10] ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.359      ;
+; -1.424 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[12] ; CLK          ; CLK         ; 1.000        ; -0.065     ; 2.359      ;
+; -1.422 ; rx_bps_module:U2|Count_BPS[3]  ; rx_control_module:U3|rData[7]  ; CLK          ; CLK         ; 1.000        ; -0.066     ; 2.356      ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV -40C Model Hold: 'CLK'                                                                                                            ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.326 ; rx_control_module:U3|rData[2]  ; rx_control_module:U3|rData[2]  ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.574      ;
+; 0.326 ; rx_control_module:U3|rData[0]  ; rx_control_module:U3|rData[0]  ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.574      ;
+; 0.326 ; rx_control_module:U3|State[3]  ; rx_control_module:U3|State[3]  ; CLK          ; CLK         ; 0.000        ; 0.080      ; 0.574      ;
+; 0.327 ; rx_control_module:U3|State[1]  ; rx_control_module:U3|State[1]  ; CLK          ; CLK         ; 0.000        ; 0.079      ; 0.574      ;
+; 0.341 ; rx_control_module:U3|rData[7]  ; rx_control_module:U3|rData[7]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.341 ; rx_control_module:U3|rData[6]  ; rx_control_module:U3|rData[6]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.341 ; rx_control_module:U3|rData[5]  ; rx_control_module:U3|rData[5]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.341 ; rx_control_module:U3|rData[4]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.341 ; rx_control_module:U3|rData[3]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.341 ; rx_control_module:U3|rData[1]  ; rx_control_module:U3|rData[1]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.341 ; rx_control_module:U3|isDone    ; rx_control_module:U3|isDone    ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.341 ; rx_control_module:U3|State[2]  ; rx_control_module:U3|State[2]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.341 ; rx_control_module:U3|State[0]  ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.341 ; rx_control_module:U3|isCount   ; rx_control_module:U3|isCount   ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.574      ;
+; 0.393 ; rx_control_module:U3|rData[4]  ; display_module:U4|rLED_Out[4]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.626      ;
+; 0.396 ; rx_control_module:U3|rData[3]  ; display_module:U4|rLED_Out[3]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.629      ;
+; 0.401 ; rx_bps_module:U2|Count_BPS[12] ; rx_bps_module:U2|Count_BPS[12] ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.634      ;
+; 0.572 ; rx_control_module:U3|State[2]  ; rx_control_module:U3|rData[0]  ; CLK          ; CLK         ; 0.000        ; 0.449      ; 1.189      ;
+; 0.589 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[1]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.822      ;
+; 0.592 ; rx_bps_module:U2|Count_BPS[4]  ; rx_bps_module:U2|Count_BPS[4]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.825      ;
+; 0.594 ; rx_bps_module:U2|Count_BPS[7]  ; rx_bps_module:U2|Count_BPS[7]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.827      ;
+; 0.595 ; rx_bps_module:U2|Count_BPS[2]  ; rx_bps_module:U2|Count_BPS[2]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.828      ;
+; 0.596 ; rx_bps_module:U2|Count_BPS[8]  ; rx_bps_module:U2|Count_BPS[8]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.829      ;
+; 0.596 ; rx_bps_module:U2|Count_BPS[9]  ; rx_bps_module:U2|Count_BPS[9]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.829      ;
+; 0.597 ; rx_bps_module:U2|Count_BPS[11] ; rx_bps_module:U2|Count_BPS[11] ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.830      ;
+; 0.602 ; rx_bps_module:U2|Count_BPS[6]  ; rx_bps_module:U2|Count_BPS[6]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.835      ;
+; 0.608 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[3]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.841      ;
+; 0.612 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[5]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.845      ;
+; 0.612 ; rx_bps_module:U2|Count_BPS[0]  ; rx_bps_module:U2|Count_BPS[0]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.845      ;
+; 0.614 ; rx_bps_module:U2|Count_BPS[10] ; rx_bps_module:U2|Count_BPS[10] ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.847      ;
+; 0.629 ; rx_control_module:U3|State[2]  ; rx_control_module:U3|rData[5]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.862      ;
+; 0.650 ; rx_control_module:U3|State[0]  ; rx_control_module:U3|rData[7]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.883      ;
+; 0.651 ; rx_control_module:U3|State[2]  ; rx_control_module:U3|rData[1]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.884      ;
+; 0.666 ; rx_control_module:U3|State[0]  ; rx_control_module:U3|rData[6]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.899      ;
+; 0.705 ; rx_control_module:U3|rData[1]  ; display_module:U4|rLED_Out[1]  ; CLK          ; CLK         ; 0.000        ; 0.067      ; 0.940      ;
+; 0.720 ; detect_module:U1|neg1          ; detect_module:U1|neg2          ; CLK          ; CLK         ; 0.000        ; 0.065      ; 0.953      ;
+; 0.725 ; rx_control_module:U3|rData[5]  ; display_module:U4|rLED_Out[5]  ; CLK          ; CLK         ; 0.000        ; 0.067      ; 0.960      ;
+; 0.849 ; rx_control_module:U3|State[0]  ; rx_control_module:U3|rData[0]  ; CLK          ; CLK         ; 0.000        ; 0.449      ; 1.466      ;
+; 0.865 ; rx_bps_module:U2|Count_BPS[4]  ; rx_bps_module:U2|Count_BPS[5]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.098      ;
+; 0.866 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[2]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.099      ;
+; 0.870 ; rx_bps_module:U2|Count_BPS[0]  ; rx_bps_module:U2|Count_BPS[1]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.103      ;
+; 0.871 ; rx_bps_module:U2|Count_BPS[2]  ; rx_bps_module:U2|Count_BPS[3]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.104      ;
+; 0.872 ; rx_bps_module:U2|Count_BPS[7]  ; rx_bps_module:U2|Count_BPS[8]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.105      ;
+; 0.872 ; rx_bps_module:U2|Count_BPS[8]  ; rx_bps_module:U2|Count_BPS[9]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.105      ;
+; 0.873 ; rx_bps_module:U2|Count_BPS[9]  ; rx_bps_module:U2|Count_BPS[10] ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.106      ;
+; 0.874 ; rx_bps_module:U2|Count_BPS[11] ; rx_bps_module:U2|Count_BPS[12] ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.107      ;
+; 0.877 ; rx_control_module:U3|rData[7]  ; display_module:U4|rLED_Out[7]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.110      ;
+; 0.878 ; rx_bps_module:U2|Count_BPS[6]  ; rx_bps_module:U2|Count_BPS[7]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.111      ;
+; 0.879 ; rx_bps_module:U2|Count_BPS[4]  ; rx_bps_module:U2|Count_BPS[6]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.112      ;
+; 0.884 ; rx_bps_module:U2|Count_BPS[0]  ; rx_bps_module:U2|Count_BPS[2]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.117      ;
+; 0.885 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[4]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.118      ;
+; 0.885 ; rx_bps_module:U2|Count_BPS[2]  ; rx_bps_module:U2|Count_BPS[4]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.118      ;
+; 0.886 ; rx_bps_module:U2|Count_BPS[8]  ; rx_bps_module:U2|Count_BPS[10] ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.119      ;
+; 0.890 ; rx_bps_module:U2|Count_BPS[10] ; rx_bps_module:U2|Count_BPS[11] ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.123      ;
+; 0.890 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[6]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.123      ;
+; 0.892 ; rx_bps_module:U2|Count_BPS[6]  ; rx_bps_module:U2|Count_BPS[8]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.125      ;
+; 0.904 ; rx_bps_module:U2|Count_BPS[10] ; rx_bps_module:U2|Count_BPS[12] ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.137      ;
+; 0.919 ; rx_control_module:U3|State[2]  ; rx_control_module:U3|rData[2]  ; CLK          ; CLK         ; 0.000        ; 0.449      ; 1.536      ;
+; 0.931 ; rx_control_module:U3|rData[6]  ; display_module:U4|rLED_Out[6]  ; CLK          ; CLK         ; 0.000        ; 0.066      ; 1.165      ;
+; 0.956 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[3]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.189      ;
+; 0.962 ; rx_bps_module:U2|Count_BPS[7]  ; rx_bps_module:U2|Count_BPS[9]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.195      ;
+; 0.963 ; rx_bps_module:U2|Count_BPS[9]  ; rx_bps_module:U2|Count_BPS[11] ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.196      ;
+; 0.969 ; rx_bps_module:U2|Count_BPS[4]  ; rx_bps_module:U2|Count_BPS[7]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.202      ;
+; 0.970 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[4]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.203      ;
+; 0.974 ; rx_bps_module:U2|Count_BPS[0]  ; rx_bps_module:U2|Count_BPS[3]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.207      ;
+; 0.975 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[5]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.208      ;
+; 0.975 ; rx_bps_module:U2|Count_BPS[2]  ; rx_bps_module:U2|Count_BPS[5]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.208      ;
+; 0.976 ; rx_control_module:U3|isDone    ; display_module:U4|rLED_Out[5]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.209      ;
+; 0.976 ; rx_control_module:U3|isDone    ; display_module:U4|rLED_Out[4]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.209      ;
+; 0.976 ; rx_control_module:U3|isDone    ; display_module:U4|rLED_Out[3]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.209      ;
+; 0.976 ; rx_control_module:U3|isDone    ; display_module:U4|rLED_Out[2]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.209      ;
+; 0.976 ; rx_control_module:U3|isDone    ; display_module:U4|rLED_Out[1]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.209      ;
+; 0.976 ; rx_control_module:U3|isDone    ; display_module:U4|rLED_Out[0]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.209      ;
+; 0.976 ; rx_bps_module:U2|Count_BPS[7]  ; rx_bps_module:U2|Count_BPS[10] ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.209      ;
+; 0.976 ; rx_bps_module:U2|Count_BPS[8]  ; rx_bps_module:U2|Count_BPS[11] ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.209      ;
+; 0.977 ; rx_bps_module:U2|Count_BPS[9]  ; rx_bps_module:U2|Count_BPS[12] ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.210      ;
+; 0.978 ; rx_control_module:U3|State[0]  ; rx_control_module:U3|rData[2]  ; CLK          ; CLK         ; 0.000        ; 0.449      ; 1.595      ;
+; 0.980 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[7]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.213      ;
+; 0.982 ; rx_bps_module:U2|Count_BPS[6]  ; rx_bps_module:U2|Count_BPS[9]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.215      ;
+; 0.983 ; rx_bps_module:U2|Count_BPS[4]  ; rx_bps_module:U2|Count_BPS[8]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.216      ;
+; 0.988 ; rx_bps_module:U2|Count_BPS[0]  ; rx_bps_module:U2|Count_BPS[4]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.221      ;
+; 0.989 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[6]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.222      ;
+; 0.989 ; rx_bps_module:U2|Count_BPS[2]  ; rx_bps_module:U2|Count_BPS[6]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.222      ;
+; 0.990 ; rx_bps_module:U2|Count_BPS[8]  ; rx_bps_module:U2|Count_BPS[12] ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.223      ;
+; 0.994 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[8]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.227      ;
+; 0.996 ; rx_bps_module:U2|Count_BPS[6]  ; rx_bps_module:U2|Count_BPS[10] ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.229      ;
+; 1.004 ; rx_control_module:U3|State[2]  ; rx_control_module:U3|rData[6]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.237      ;
+; 1.006 ; rx_control_module:U3|State[2]  ; rx_control_module:U3|rData[7]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.239      ;
+; 1.012 ; rx_control_module:U3|State[0]  ; rx_control_module:U3|State[1]  ; CLK          ; CLK         ; 0.000        ; 0.415      ; 1.595      ;
+; 1.014 ; rx_control_module:U3|State[2]  ; rx_control_module:U3|State[1]  ; CLK          ; CLK         ; 0.000        ; 0.415      ; 1.597      ;
+; 1.042 ; rx_control_module:U3|State[0]  ; rx_control_module:U3|rData[5]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.275      ;
+; 1.043 ; rx_control_module:U3|State[0]  ; rx_control_module:U3|rData[1]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.276      ;
+; 1.060 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[5]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.293      ;
+; 1.062 ; rx_control_module:U3|rData[2]  ; display_module:U4|rLED_Out[2]  ; CLK          ; CLK         ; 0.000        ; -0.302     ; 0.928      ;
+; 1.066 ; rx_bps_module:U2|Count_BPS[7]  ; rx_bps_module:U2|Count_BPS[11] ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.299      ;
+; 1.073 ; rx_bps_module:U2|Count_BPS[4]  ; rx_bps_module:U2|Count_BPS[9]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.306      ;
+; 1.074 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[6]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.307      ;
+; 1.078 ; rx_bps_module:U2|Count_BPS[0]  ; rx_bps_module:U2|Count_BPS[5]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.311      ;
+; 1.079 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[7]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.312      ;
+; 1.079 ; rx_bps_module:U2|Count_BPS[2]  ; rx_bps_module:U2|Count_BPS[7]  ; CLK          ; CLK         ; 0.000        ; 0.065      ; 1.312      ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+------------------------------------------------
+; Slow 1200mV -40C Model Metastability Summary ;
+------------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------+
+; Fast 1200mV -40C Model Setup Summary ;
++-------+--------+---------------------+
+; Clock ; Slack  ; End Point TNS       ;
++-------+--------+---------------------+
+; CLK   ; -0.467 ; -7.573              ;
++-------+--------+---------------------+
+
+
++-------------------------------------+
+; Fast 1200mV -40C Model Hold Summary ;
++-------+-------+---------------------+
+; Clock ; Slack ; End Point TNS       ;
++-------+-------+---------------------+
+; CLK   ; 0.170 ; 0.000               ;
++-------+-------+---------------------+
+
+
+-------------------------------------------
+; Fast 1200mV -40C Model Recovery Summary ;
+-------------------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Fast 1200mV -40C Model Removal Summary ;
+------------------------------------------
+No paths to report.
+
+
++----------------------------------------------------+
+; Fast 1200mV -40C Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------------------+
+; Clock ; Slack  ; End Point TNS                     ;
++-------+--------+-----------------------------------+
+; CLK   ; -3.000 ; -41.977                           ;
++-------+--------+-----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV -40C Model Setup: 'CLK'                                                                                                            ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.467 ; rx_bps_module:U2|Count_BPS[10] ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.419      ;
+; -0.461 ; rx_bps_module:U2|Count_BPS[10] ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.413      ;
+; -0.448 ; rx_bps_module:U2|Count_BPS[6]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.400      ;
+; -0.442 ; rx_bps_module:U2|Count_BPS[6]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.394      ;
+; -0.416 ; rx_bps_module:U2|Count_BPS[7]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.368      ;
+; -0.410 ; rx_bps_module:U2|Count_BPS[7]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.362      ;
+; -0.400 ; rx_bps_module:U2|Count_BPS[10] ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.350      ;
+; -0.399 ; rx_bps_module:U2|Count_BPS[10] ; rx_control_module:U3|State[2]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.349      ;
+; -0.397 ; rx_bps_module:U2|Count_BPS[2]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.349      ;
+; -0.391 ; rx_bps_module:U2|Count_BPS[2]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.343      ;
+; -0.387 ; rx_bps_module:U2|Count_BPS[11] ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.339      ;
+; -0.381 ; rx_bps_module:U2|Count_BPS[11] ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.333      ;
+; -0.381 ; rx_bps_module:U2|Count_BPS[6]  ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.331      ;
+; -0.380 ; rx_bps_module:U2|Count_BPS[6]  ; rx_control_module:U3|State[2]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.330      ;
+; -0.375 ; rx_bps_module:U2|Count_BPS[3]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.327      ;
+; -0.369 ; rx_bps_module:U2|Count_BPS[3]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.321      ;
+; -0.368 ; rx_bps_module:U2|Count_BPS[10] ; rx_control_module:U3|rData[7]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.318      ;
+; -0.368 ; rx_bps_module:U2|Count_BPS[10] ; rx_control_module:U3|rData[1]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.318      ;
+; -0.367 ; rx_bps_module:U2|Count_BPS[10] ; rx_control_module:U3|rData[5]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.317      ;
+; -0.366 ; rx_bps_module:U2|Count_BPS[10] ; rx_control_module:U3|rData[6]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.316      ;
+; -0.357 ; rx_control_module:U3|State[1]  ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.217     ; 1.128      ;
+; -0.356 ; rx_control_module:U3|State[1]  ; rx_control_module:U3|State[2]  ; CLK          ; CLK         ; 1.000        ; -0.217     ; 1.127      ;
+; -0.349 ; rx_bps_module:U2|Count_BPS[7]  ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.299      ;
+; -0.349 ; rx_bps_module:U2|Count_BPS[6]  ; rx_control_module:U3|rData[7]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.299      ;
+; -0.349 ; rx_bps_module:U2|Count_BPS[6]  ; rx_control_module:U3|rData[1]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.299      ;
+; -0.348 ; rx_bps_module:U2|Count_BPS[7]  ; rx_control_module:U3|State[2]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.298      ;
+; -0.348 ; rx_bps_module:U2|Count_BPS[6]  ; rx_control_module:U3|rData[5]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.298      ;
+; -0.347 ; rx_bps_module:U2|Count_BPS[6]  ; rx_control_module:U3|rData[6]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.297      ;
+; -0.329 ; rx_bps_module:U2|Count_BPS[0]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.281      ;
+; -0.326 ; rx_control_module:U3|State[3]  ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.231     ; 1.083      ;
+; -0.323 ; rx_bps_module:U2|Count_BPS[0]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.275      ;
+; -0.323 ; rx_bps_module:U2|Count_BPS[9]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.275      ;
+; -0.319 ; rx_bps_module:U2|Count_BPS[4]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.271      ;
+; -0.317 ; rx_bps_module:U2|Count_BPS[9]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.269      ;
+; -0.317 ; rx_bps_module:U2|Count_BPS[7]  ; rx_control_module:U3|rData[7]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.267      ;
+; -0.317 ; rx_bps_module:U2|Count_BPS[7]  ; rx_control_module:U3|rData[1]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.267      ;
+; -0.316 ; rx_bps_module:U2|Count_BPS[7]  ; rx_control_module:U3|rData[5]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.266      ;
+; -0.315 ; rx_bps_module:U2|Count_BPS[7]  ; rx_control_module:U3|rData[6]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.265      ;
+; -0.313 ; rx_bps_module:U2|Count_BPS[4]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.265      ;
+; -0.310 ; rx_control_module:U3|State[3]  ; rx_control_module:U3|State[1]  ; CLK          ; CLK         ; 1.000        ; -0.058     ; 1.240      ;
+; -0.303 ; rx_bps_module:U2|Count_BPS[1]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.255      ;
+; -0.297 ; rx_bps_module:U2|Count_BPS[1]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.249      ;
+; -0.293 ; rx_bps_module:U2|Count_BPS[11] ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.243      ;
+; -0.292 ; rx_bps_module:U2|Count_BPS[11] ; rx_control_module:U3|State[2]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.242      ;
+; -0.286 ; rx_bps_module:U2|Count_BPS[2]  ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.236      ;
+; -0.286 ; rx_bps_module:U2|Count_BPS[10] ; rx_control_module:U3|State[1]  ; CLK          ; CLK         ; 1.000        ; 0.135      ; 1.409      ;
+; -0.285 ; rx_bps_module:U2|Count_BPS[2]  ; rx_control_module:U3|State[2]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.235      ;
+; -0.280 ; rx_control_module:U3|State[2]  ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.231      ;
+; -0.272 ; rx_bps_module:U2|Count_BPS[8]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.224      ;
+; -0.268 ; rx_bps_module:U2|Count_BPS[2]  ; rx_control_module:U3|rData[7]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.218      ;
+; -0.267 ; rx_bps_module:U2|Count_BPS[6]  ; rx_control_module:U3|State[1]  ; CLK          ; CLK         ; 1.000        ; 0.135      ; 1.390      ;
+; -0.266 ; rx_bps_module:U2|Count_BPS[8]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.036     ; 1.218      ;
+; -0.266 ; rx_bps_module:U2|Count_BPS[2]  ; rx_control_module:U3|rData[1]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.216      ;
+; -0.266 ; rx_bps_module:U2|Count_BPS[2]  ; rx_control_module:U3|rData[6]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.216      ;
+; -0.265 ; rx_bps_module:U2|Count_BPS[2]  ; rx_control_module:U3|rData[5]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.215      ;
+; -0.264 ; rx_control_module:U3|State[2]  ; rx_control_module:U3|State[1]  ; CLK          ; CLK         ; 1.000        ; 0.136      ; 1.388      ;
+; -0.264 ; rx_control_module:U3|State[1]  ; rx_control_module:U3|State[1]  ; CLK          ; CLK         ; 1.000        ; -0.044     ; 1.208      ;
+; -0.262 ; rx_bps_module:U2|Count_BPS[0]  ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.212      ;
+; -0.261 ; rx_bps_module:U2|Count_BPS[11] ; rx_control_module:U3|rData[7]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.211      ;
+; -0.261 ; rx_bps_module:U2|Count_BPS[11] ; rx_control_module:U3|rData[1]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.211      ;
+; -0.261 ; rx_bps_module:U2|Count_BPS[0]  ; rx_control_module:U3|State[2]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.211      ;
+; -0.260 ; rx_bps_module:U2|Count_BPS[11] ; rx_control_module:U3|rData[5]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.210      ;
+; -0.259 ; rx_bps_module:U2|Count_BPS[11] ; rx_control_module:U3|rData[6]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.209      ;
+; -0.258 ; rx_bps_module:U2|Count_BPS[3]  ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.208      ;
+; -0.257 ; rx_bps_module:U2|Count_BPS[3]  ; rx_control_module:U3|State[2]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.207      ;
+; -0.252 ; rx_bps_module:U2|Count_BPS[4]  ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.202      ;
+; -0.251 ; rx_control_module:U3|State[3]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.229     ; 1.010      ;
+; -0.251 ; rx_bps_module:U2|Count_BPS[4]  ; rx_control_module:U3|State[2]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.201      ;
+; -0.246 ; rx_bps_module:U2|Count_BPS[3]  ; rx_control_module:U3|rData[7]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.196      ;
+; -0.244 ; rx_control_module:U3|State[1]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 1.000        ; -0.215     ; 1.017      ;
+; -0.244 ; rx_bps_module:U2|Count_BPS[3]  ; rx_control_module:U3|rData[1]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.194      ;
+; -0.244 ; rx_bps_module:U2|Count_BPS[3]  ; rx_control_module:U3|rData[6]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.194      ;
+; -0.243 ; rx_control_module:U3|State[3]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 1.000        ; -0.229     ; 1.002      ;
+; -0.243 ; rx_bps_module:U2|Count_BPS[3]  ; rx_control_module:U3|rData[5]  ; CLK          ; CLK         ; 1.000        ; -0.038     ; 1.193      ;
+; -0.242 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[5]  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.193      ;
+; -0.242 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[7]  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.193      ;
+; -0.242 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[0]  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.193      ;
+; -0.242 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[1]  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.193      ;
+; -0.242 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[2]  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.193      ;
+; -0.242 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[3]  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.193      ;
+; -0.242 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[4]  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.193      ;
+; -0.242 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[6]  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.193      ;
+; -0.242 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[8]  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.193      ;
+; -0.242 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[9]  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.193      ;
+; -0.242 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[11] ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.193      ;
+; -0.242 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[10] ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.193      ;
+; -0.242 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[12] ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.193      ;
+; -0.242 ; rx_control_module:U3|State[3]  ; rx_control_module:U3|State[2]  ; CLK          ; CLK         ; 1.000        ; -0.231     ; 0.999      ;
+; -0.239 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[5]  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.190      ;
+; -0.239 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[7]  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.190      ;
+; -0.239 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[0]  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.190      ;
+; -0.239 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[1]  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.190      ;
+; -0.239 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[2]  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.190      ;
+; -0.239 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[3]  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.190      ;
+; -0.239 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[4]  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.190      ;
+; -0.239 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[6]  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.190      ;
+; -0.239 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[8]  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.190      ;
+; -0.239 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[9]  ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.190      ;
+; -0.239 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[11] ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.190      ;
+; -0.239 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[10] ; CLK          ; CLK         ; 1.000        ; -0.037     ; 1.190      ;
++--------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV -40C Model Hold: 'CLK'                                                                                                            ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                      ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.170 ; rx_control_module:U3|rData[2]  ; rx_control_module:U3|rData[2]  ; CLK          ; CLK         ; 0.000        ; 0.044      ; 0.296      ;
+; 0.170 ; rx_control_module:U3|rData[0]  ; rx_control_module:U3|rData[0]  ; CLK          ; CLK         ; 0.000        ; 0.044      ; 0.296      ;
+; 0.170 ; rx_control_module:U3|State[3]  ; rx_control_module:U3|State[3]  ; CLK          ; CLK         ; 0.000        ; 0.044      ; 0.296      ;
+; 0.170 ; rx_control_module:U3|State[1]  ; rx_control_module:U3|State[1]  ; CLK          ; CLK         ; 0.000        ; 0.044      ; 0.296      ;
+; 0.177 ; rx_control_module:U3|rData[7]  ; rx_control_module:U3|rData[7]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; rx_control_module:U3|rData[6]  ; rx_control_module:U3|rData[6]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; rx_control_module:U3|rData[5]  ; rx_control_module:U3|rData[5]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; rx_control_module:U3|rData[4]  ; rx_control_module:U3|rData[4]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; rx_control_module:U3|rData[3]  ; rx_control_module:U3|rData[3]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; rx_control_module:U3|rData[1]  ; rx_control_module:U3|rData[1]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; rx_control_module:U3|isDone    ; rx_control_module:U3|isDone    ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; rx_control_module:U3|State[2]  ; rx_control_module:U3|State[2]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; rx_control_module:U3|State[0]  ; rx_control_module:U3|State[0]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.177 ; rx_control_module:U3|isCount   ; rx_control_module:U3|isCount   ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.296      ;
+; 0.182 ; rx_control_module:U3|rData[4]  ; display_module:U4|rLED_Out[4]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.301      ;
+; 0.185 ; rx_control_module:U3|rData[3]  ; display_module:U4|rLED_Out[3]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.304      ;
+; 0.197 ; rx_bps_module:U2|Count_BPS[12] ; rx_bps_module:U2|Count_BPS[12] ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.316      ;
+; 0.285 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[1]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.404      ;
+; 0.286 ; rx_bps_module:U2|Count_BPS[7]  ; rx_bps_module:U2|Count_BPS[7]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.405      ;
+; 0.286 ; rx_bps_module:U2|Count_BPS[4]  ; rx_bps_module:U2|Count_BPS[4]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.405      ;
+; 0.287 ; rx_bps_module:U2|Count_BPS[2]  ; rx_bps_module:U2|Count_BPS[2]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.406      ;
+; 0.287 ; rx_bps_module:U2|Count_BPS[8]  ; rx_bps_module:U2|Count_BPS[8]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.406      ;
+; 0.289 ; rx_bps_module:U2|Count_BPS[9]  ; rx_bps_module:U2|Count_BPS[9]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.408      ;
+; 0.289 ; rx_bps_module:U2|Count_BPS[11] ; rx_bps_module:U2|Count_BPS[11] ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.408      ;
+; 0.290 ; rx_bps_module:U2|Count_BPS[6]  ; rx_bps_module:U2|Count_BPS[6]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.409      ;
+; 0.296 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[5]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.415      ;
+; 0.296 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[3]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.415      ;
+; 0.297 ; rx_bps_module:U2|Count_BPS[0]  ; rx_bps_module:U2|Count_BPS[0]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.416      ;
+; 0.297 ; rx_bps_module:U2|Count_BPS[10] ; rx_bps_module:U2|Count_BPS[10] ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.416      ;
+; 0.306 ; rx_control_module:U3|State[2]  ; rx_control_module:U3|rData[0]  ; CLK          ; CLK         ; 0.000        ; 0.231      ; 0.619      ;
+; 0.307 ; rx_control_module:U3|State[2]  ; rx_control_module:U3|rData[5]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.426      ;
+; 0.316 ; rx_control_module:U3|State[2]  ; rx_control_module:U3|rData[1]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.435      ;
+; 0.319 ; rx_control_module:U3|State[0]  ; rx_control_module:U3|rData[7]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.438      ;
+; 0.325 ; rx_control_module:U3|State[0]  ; rx_control_module:U3|rData[6]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.444      ;
+; 0.332 ; detect_module:U1|neg1          ; detect_module:U1|neg2          ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.451      ;
+; 0.345 ; rx_control_module:U3|rData[1]  ; display_module:U4|rLED_Out[1]  ; CLK          ; CLK         ; 0.000        ; 0.039      ; 0.466      ;
+; 0.356 ; rx_control_module:U3|rData[5]  ; display_module:U4|rLED_Out[5]  ; CLK          ; CLK         ; 0.000        ; 0.039      ; 0.477      ;
+; 0.418 ; rx_control_module:U3|rData[7]  ; display_module:U4|rLED_Out[7]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.537      ;
+; 0.429 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[2]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.548      ;
+; 0.430 ; rx_bps_module:U2|Count_BPS[7]  ; rx_bps_module:U2|Count_BPS[8]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.549      ;
+; 0.433 ; rx_bps_module:U2|Count_BPS[11] ; rx_bps_module:U2|Count_BPS[12] ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.552      ;
+; 0.433 ; rx_bps_module:U2|Count_BPS[9]  ; rx_bps_module:U2|Count_BPS[10] ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.552      ;
+; 0.438 ; rx_bps_module:U2|Count_BPS[4]  ; rx_bps_module:U2|Count_BPS[5]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.557      ;
+; 0.438 ; rx_control_module:U3|State[0]  ; rx_control_module:U3|rData[0]  ; CLK          ; CLK         ; 0.000        ; 0.231      ; 0.751      ;
+; 0.439 ; rx_control_module:U3|rData[6]  ; display_module:U4|rLED_Out[6]  ; CLK          ; CLK         ; 0.000        ; 0.038      ; 0.559      ;
+; 0.439 ; rx_bps_module:U2|Count_BPS[0]  ; rx_bps_module:U2|Count_BPS[1]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.558      ;
+; 0.440 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[4]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.559      ;
+; 0.440 ; rx_bps_module:U2|Count_BPS[8]  ; rx_bps_module:U2|Count_BPS[9]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.559      ;
+; 0.440 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[6]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.559      ;
+; 0.440 ; rx_bps_module:U2|Count_BPS[2]  ; rx_bps_module:U2|Count_BPS[3]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.559      ;
+; 0.440 ; rx_bps_module:U2|Count_BPS[4]  ; rx_bps_module:U2|Count_BPS[6]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.559      ;
+; 0.441 ; rx_bps_module:U2|Count_BPS[0]  ; rx_bps_module:U2|Count_BPS[2]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.560      ;
+; 0.442 ; rx_bps_module:U2|Count_BPS[8]  ; rx_bps_module:U2|Count_BPS[10] ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.561      ;
+; 0.442 ; rx_bps_module:U2|Count_BPS[2]  ; rx_bps_module:U2|Count_BPS[4]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.561      ;
+; 0.443 ; rx_bps_module:U2|Count_BPS[6]  ; rx_bps_module:U2|Count_BPS[7]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.562      ;
+; 0.445 ; rx_bps_module:U2|Count_BPS[6]  ; rx_bps_module:U2|Count_BPS[8]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.564      ;
+; 0.450 ; rx_bps_module:U2|Count_BPS[10] ; rx_bps_module:U2|Count_BPS[11] ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.569      ;
+; 0.451 ; rx_control_module:U3|State[2]  ; rx_control_module:U3|rData[2]  ; CLK          ; CLK         ; 0.000        ; 0.231      ; 0.764      ;
+; 0.452 ; rx_bps_module:U2|Count_BPS[10] ; rx_bps_module:U2|Count_BPS[12] ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.571      ;
+; 0.476 ; rx_control_module:U3|State[2]  ; rx_control_module:U3|State[1]  ; CLK          ; CLK         ; 0.000        ; 0.217      ; 0.775      ;
+; 0.483 ; rx_control_module:U3|isDone    ; display_module:U4|rLED_Out[5]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.602      ;
+; 0.483 ; rx_control_module:U3|isDone    ; display_module:U4|rLED_Out[4]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.602      ;
+; 0.483 ; rx_control_module:U3|isDone    ; display_module:U4|rLED_Out[3]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.602      ;
+; 0.483 ; rx_control_module:U3|isDone    ; display_module:U4|rLED_Out[2]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.602      ;
+; 0.483 ; rx_control_module:U3|isDone    ; display_module:U4|rLED_Out[1]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.602      ;
+; 0.483 ; rx_control_module:U3|isDone    ; display_module:U4|rLED_Out[0]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.602      ;
+; 0.486 ; rx_control_module:U3|State[0]  ; rx_control_module:U3|State[1]  ; CLK          ; CLK         ; 0.000        ; 0.217      ; 0.785      ;
+; 0.487 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[3]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.606      ;
+; 0.488 ; rx_bps_module:U2|Count_BPS[7]  ; rx_bps_module:U2|Count_BPS[9]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.607      ;
+; 0.489 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[4]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.608      ;
+; 0.490 ; rx_bps_module:U2|Count_BPS[7]  ; rx_bps_module:U2|Count_BPS[10] ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.609      ;
+; 0.491 ; rx_bps_module:U2|Count_BPS[9]  ; rx_bps_module:U2|Count_BPS[11] ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.610      ;
+; 0.492 ; rx_control_module:U3|State[0]  ; rx_control_module:U3|rData[5]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.611      ;
+; 0.493 ; rx_control_module:U3|State[0]  ; rx_control_module:U3|rData[1]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.612      ;
+; 0.493 ; rx_bps_module:U2|Count_BPS[9]  ; rx_bps_module:U2|Count_BPS[12] ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.612      ;
+; 0.498 ; rx_control_module:U3|State[0]  ; rx_control_module:U3|rData[2]  ; CLK          ; CLK         ; 0.000        ; 0.231      ; 0.811      ;
+; 0.498 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[5]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.617      ;
+; 0.498 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[7]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.617      ;
+; 0.498 ; rx_bps_module:U2|Count_BPS[4]  ; rx_bps_module:U2|Count_BPS[7]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.617      ;
+; 0.499 ; rx_bps_module:U2|Count_BPS[0]  ; rx_bps_module:U2|Count_BPS[3]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.618      ;
+; 0.500 ; rx_control_module:U3|State[2]  ; rx_control_module:U3|rData[6]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.619      ;
+; 0.500 ; rx_bps_module:U2|Count_BPS[3]  ; rx_bps_module:U2|Count_BPS[6]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.619      ;
+; 0.500 ; rx_bps_module:U2|Count_BPS[5]  ; rx_bps_module:U2|Count_BPS[8]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.619      ;
+; 0.500 ; rx_bps_module:U2|Count_BPS[8]  ; rx_bps_module:U2|Count_BPS[11] ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.619      ;
+; 0.500 ; rx_bps_module:U2|Count_BPS[2]  ; rx_bps_module:U2|Count_BPS[5]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.619      ;
+; 0.500 ; rx_bps_module:U2|Count_BPS[4]  ; rx_bps_module:U2|Count_BPS[8]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.619      ;
+; 0.501 ; rx_control_module:U3|State[2]  ; rx_control_module:U3|rData[7]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.620      ;
+; 0.501 ; rx_bps_module:U2|Count_BPS[0]  ; rx_bps_module:U2|Count_BPS[4]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.620      ;
+; 0.502 ; rx_bps_module:U2|Count_BPS[8]  ; rx_bps_module:U2|Count_BPS[12] ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.621      ;
+; 0.502 ; rx_bps_module:U2|Count_BPS[2]  ; rx_bps_module:U2|Count_BPS[6]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.621      ;
+; 0.503 ; rx_bps_module:U2|Count_BPS[6]  ; rx_bps_module:U2|Count_BPS[9]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.622      ;
+; 0.505 ; rx_bps_module:U2|Count_BPS[6]  ; rx_bps_module:U2|Count_BPS[10] ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.624      ;
+; 0.530 ; rx_control_module:U3|rData[2]  ; display_module:U4|rLED_Out[2]  ; CLK          ; CLK         ; 0.000        ; -0.148     ; 0.464      ;
+; 0.532 ; rx_control_module:U3|State[1]  ; rx_control_module:U3|rData[0]  ; CLK          ; CLK         ; 0.000        ; 0.058      ; 0.672      ;
+; 0.536 ; rx_control_module:U3|rData[0]  ; display_module:U4|rLED_Out[0]  ; CLK          ; CLK         ; 0.000        ; -0.148     ; 0.470      ;
+; 0.544 ; rx_control_module:U3|State[2]  ; rx_control_module:U3|State[3]  ; CLK          ; CLK         ; 0.000        ; 0.231      ; 0.857      ;
+; 0.547 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[5]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.666      ;
+; 0.548 ; rx_bps_module:U2|Count_BPS[7]  ; rx_bps_module:U2|Count_BPS[11] ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.667      ;
+; 0.549 ; rx_bps_module:U2|Count_BPS[1]  ; rx_bps_module:U2|Count_BPS[6]  ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.668      ;
+; 0.550 ; rx_bps_module:U2|Count_BPS[7]  ; rx_bps_module:U2|Count_BPS[12] ; CLK          ; CLK         ; 0.000        ; 0.037      ; 0.669      ;
++-------+--------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+------------------------------------------------
+; Fast 1200mV -40C Model Metastability Summary ;
+------------------------------------------------
+No synchronizer chains to report.
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -2.236  ; 0.170 ; N/A      ; N/A     ; -3.000              ;
+;  CLK             ; -2.236  ; 0.170 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -53.882 ; 0.0   ; 0.0      ; 0.0     ; -50.545             ;
+;  CLK             ; -53.882 ; 0.000 ; N/A      ; N/A     ; -50.545             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; LED_Out[0]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LED_Out[1]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LED_Out[2]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LED_Out[3]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LED_Out[4]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LED_Out[5]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LED_Out[6]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LED_Out[7]    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; CLK                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Rstn                    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; RX_Pin_In               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; RX_En_Sig               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv n40c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; LED_Out[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.4e-09 V                    ; 2.34 V              ; -0.00664 V          ; 0.204 V                              ; 0.106 V                              ; 2.63e-09 s                  ; 2.46e-09 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.4e-09 V                   ; 2.34 V             ; -0.00664 V         ; 0.204 V                             ; 0.106 V                             ; 2.63e-09 s                 ; 2.46e-09 s                 ; No                        ; Yes                       ;
+; LED_Out[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.4e-09 V                    ; 2.39 V              ; -0.0122 V           ; 0.154 V                              ; 0.017 V                              ; 4.74e-10 s                  ; 4.5e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.4e-09 V                   ; 2.39 V             ; -0.0122 V          ; 0.154 V                             ; 0.017 V                             ; 4.74e-10 s                 ; 4.5e-10 s                  ; No                        ; Yes                       ;
+; LED_Out[2]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.4e-09 V                    ; 2.39 V              ; -0.0122 V           ; 0.154 V                              ; 0.017 V                              ; 4.74e-10 s                  ; 4.5e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.4e-09 V                   ; 2.39 V             ; -0.0122 V          ; 0.154 V                             ; 0.017 V                             ; 4.74e-10 s                 ; 4.5e-10 s                  ; No                        ; Yes                       ;
+; LED_Out[3]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.4e-09 V                    ; 2.39 V              ; -0.0122 V           ; 0.154 V                              ; 0.017 V                              ; 4.74e-10 s                  ; 4.5e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.4e-09 V                   ; 2.39 V             ; -0.0122 V          ; 0.154 V                             ; 0.017 V                             ; 4.74e-10 s                 ; 4.5e-10 s                  ; No                        ; Yes                       ;
+; LED_Out[4]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.4e-09 V                    ; 2.39 V              ; -0.0122 V           ; 0.154 V                              ; 0.017 V                              ; 4.74e-10 s                  ; 4.5e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.4e-09 V                   ; 2.39 V             ; -0.0122 V          ; 0.154 V                             ; 0.017 V                             ; 4.74e-10 s                 ; 4.5e-10 s                  ; No                        ; Yes                       ;
+; LED_Out[5]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.4e-09 V                    ; 2.39 V              ; -0.0122 V           ; 0.154 V                              ; 0.017 V                              ; 4.74e-10 s                  ; 4.5e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.4e-09 V                   ; 2.39 V             ; -0.0122 V          ; 0.154 V                             ; 0.017 V                             ; 4.74e-10 s                 ; 4.5e-10 s                  ; No                        ; Yes                       ;
+; LED_Out[6]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.4e-09 V                    ; 2.39 V              ; -0.0122 V           ; 0.154 V                              ; 0.017 V                              ; 4.74e-10 s                  ; 4.5e-10 s                   ; No                         ; Yes                        ; 2.32 V                      ; 1.4e-09 V                   ; 2.39 V             ; -0.0122 V          ; 0.154 V                             ; 0.017 V                             ; 4.74e-10 s                 ; 4.5e-10 s                  ; No                        ; Yes                       ;
+; LED_Out[7]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.4 V               ; -0.0195 V           ; 0.196 V                              ; 0.023 V                              ; 2.87e-10 s                  ; 3.09e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.4 V              ; -0.0195 V          ; 0.196 V                             ; 0.023 V                             ; 2.87e-10 s                 ; 3.09e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-09 V                   ; 2.39 V              ; -0.0798 V           ; 0.13 V                               ; 0.103 V                              ; 2.71e-10 s                  ; 2.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-09 V                  ; 2.39 V             ; -0.0798 V          ; 0.13 V                              ; 0.103 V                             ; 2.71e-10 s                 ; 2.5e-10 s                  ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 100c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; LED_Out[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.69e-07 V                   ; 2.33 V              ; -0.00252 V          ; 0.116 V                              ; 0.051 V                              ; 3.6e-09 s                   ; 3.43e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.69e-07 V                  ; 2.33 V             ; -0.00252 V         ; 0.116 V                             ; 0.051 V                             ; 3.6e-09 s                  ; 3.43e-09 s                 ; Yes                       ; Yes                       ;
+; LED_Out[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.69e-07 V                   ; 2.35 V              ; -0.00962 V          ; 0.125 V                              ; 0.041 V                              ; 6.76e-10 s                  ; 6.43e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.69e-07 V                  ; 2.35 V             ; -0.00962 V         ; 0.125 V                             ; 0.041 V                             ; 6.76e-10 s                 ; 6.43e-10 s                 ; Yes                       ; Yes                       ;
+; LED_Out[2]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.69e-07 V                   ; 2.35 V              ; -0.00962 V          ; 0.125 V                              ; 0.041 V                              ; 6.76e-10 s                  ; 6.43e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.69e-07 V                  ; 2.35 V             ; -0.00962 V         ; 0.125 V                             ; 0.041 V                             ; 6.76e-10 s                 ; 6.43e-10 s                 ; Yes                       ; Yes                       ;
+; LED_Out[3]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.69e-07 V                   ; 2.35 V              ; -0.00962 V          ; 0.125 V                              ; 0.041 V                              ; 6.76e-10 s                  ; 6.43e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.69e-07 V                  ; 2.35 V             ; -0.00962 V         ; 0.125 V                             ; 0.041 V                             ; 6.76e-10 s                 ; 6.43e-10 s                 ; Yes                       ; Yes                       ;
+; LED_Out[4]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.69e-07 V                   ; 2.35 V              ; -0.00962 V          ; 0.125 V                              ; 0.041 V                              ; 6.76e-10 s                  ; 6.43e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.69e-07 V                  ; 2.35 V             ; -0.00962 V         ; 0.125 V                             ; 0.041 V                             ; 6.76e-10 s                 ; 6.43e-10 s                 ; Yes                       ; Yes                       ;
+; LED_Out[5]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.69e-07 V                   ; 2.35 V              ; -0.00962 V          ; 0.125 V                              ; 0.041 V                              ; 6.76e-10 s                  ; 6.43e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.69e-07 V                  ; 2.35 V             ; -0.00962 V         ; 0.125 V                             ; 0.041 V                             ; 6.76e-10 s                 ; 6.43e-10 s                 ; Yes                       ; Yes                       ;
+; LED_Out[6]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.69e-07 V                   ; 2.35 V              ; -0.00962 V          ; 0.125 V                              ; 0.041 V                              ; 6.76e-10 s                  ; 6.43e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.69e-07 V                  ; 2.35 V             ; -0.00962 V         ; 0.125 V                             ; 0.041 V                             ; 6.76e-10 s                 ; 6.43e-10 s                 ; Yes                       ; Yes                       ;
+; LED_Out[7]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.44e-06 V                   ; 2.35 V              ; -0.0112 V           ; 0.129 V                              ; 0.036 V                              ; 4.71e-10 s                  ; 4.65e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.44e-06 V                  ; 2.35 V             ; -0.0112 V          ; 0.129 V                             ; 0.036 V                             ; 4.71e-10 s                 ; 4.65e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.77e-07 V                   ; 2.35 V              ; -0.00801 V          ; 0.087 V                              ; 0.01 V                               ; 4.39e-10 s                  ; 3.77e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.77e-07 V                  ; 2.35 V             ; -0.00801 V         ; 0.087 V                             ; 0.01 V                              ; 4.39e-10 s                 ; 3.77e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv n40c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; LED_Out[0]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.24e-09 V                   ; 2.65 V              ; -0.0149 V           ; 0.207 V                              ; 0.176 V                              ; 2.15e-09 s                  ; 2.03e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.24e-09 V                  ; 2.65 V             ; -0.0149 V          ; 0.207 V                             ; 0.176 V                             ; 2.15e-09 s                 ; 2.03e-09 s                 ; No                        ; Yes                       ;
+; LED_Out[1]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.24e-09 V                   ; 2.74 V              ; -0.0529 V           ; 0.285 V                              ; 0.071 V                              ; 2.99e-10 s                  ; 3.3e-10 s                   ; No                         ; Yes                        ; 2.62 V                      ; 2.24e-09 V                  ; 2.74 V             ; -0.0529 V          ; 0.285 V                             ; 0.071 V                             ; 2.99e-10 s                 ; 3.3e-10 s                  ; No                        ; Yes                       ;
+; LED_Out[2]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.24e-09 V                   ; 2.74 V              ; -0.0529 V           ; 0.285 V                              ; 0.071 V                              ; 2.99e-10 s                  ; 3.3e-10 s                   ; No                         ; Yes                        ; 2.62 V                      ; 2.24e-09 V                  ; 2.74 V             ; -0.0529 V          ; 0.285 V                             ; 0.071 V                             ; 2.99e-10 s                 ; 3.3e-10 s                  ; No                        ; Yes                       ;
+; LED_Out[3]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.24e-09 V                   ; 2.74 V              ; -0.0529 V           ; 0.285 V                              ; 0.071 V                              ; 2.99e-10 s                  ; 3.3e-10 s                   ; No                         ; Yes                        ; 2.62 V                      ; 2.24e-09 V                  ; 2.74 V             ; -0.0529 V          ; 0.285 V                             ; 0.071 V                             ; 2.99e-10 s                 ; 3.3e-10 s                  ; No                        ; Yes                       ;
+; LED_Out[4]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.24e-09 V                   ; 2.74 V              ; -0.0529 V           ; 0.285 V                              ; 0.071 V                              ; 2.99e-10 s                  ; 3.3e-10 s                   ; No                         ; Yes                        ; 2.62 V                      ; 2.24e-09 V                  ; 2.74 V             ; -0.0529 V          ; 0.285 V                             ; 0.071 V                             ; 2.99e-10 s                 ; 3.3e-10 s                  ; No                        ; Yes                       ;
+; LED_Out[5]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.24e-09 V                   ; 2.74 V              ; -0.0529 V           ; 0.285 V                              ; 0.071 V                              ; 2.99e-10 s                  ; 3.3e-10 s                   ; No                         ; Yes                        ; 2.62 V                      ; 2.24e-09 V                  ; 2.74 V             ; -0.0529 V          ; 0.285 V                             ; 0.071 V                             ; 2.99e-10 s                 ; 3.3e-10 s                  ; No                        ; Yes                       ;
+; LED_Out[6]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.24e-09 V                   ; 2.74 V              ; -0.0529 V           ; 0.285 V                              ; 0.071 V                              ; 2.99e-10 s                  ; 3.3e-10 s                   ; No                         ; Yes                        ; 2.62 V                      ; 2.24e-09 V                  ; 2.74 V             ; -0.0529 V          ; 0.285 V                             ; 0.071 V                             ; 2.99e-10 s                 ; 3.3e-10 s                  ; No                        ; Yes                       ;
+; LED_Out[7]    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.18e-09 V                   ; 2.74 V              ; -0.0527 V           ; 0.162 V                              ; 0.083 V                              ; 2.61e-10 s                  ; 2.44e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 3.18e-09 V                  ; 2.74 V             ; -0.0527 V          ; 0.162 V                             ; 0.083 V                             ; 2.61e-10 s                 ; 2.44e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 1.87e-09 V                   ; 2.79 V              ; -0.0524 V           ; 0.19 V                               ; 0.066 V                              ; 2.63e-10 s                  ; 1.96e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 1.87e-09 V                  ; 2.79 V             ; -0.0524 V          ; 0.19 V                              ; 0.066 V                             ; 2.63e-10 s                 ; 1.96e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 578      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; CLK        ; CLK      ; 578      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 3     ; 3    ;
+; Unconstrained Input Port Paths  ; 60    ; 60   ;
+; Unconstrained Output Ports      ; 8     ; 8    ;
+; Unconstrained Output Port Paths ; 8     ; 8    ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; CLK    ; CLK   ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; RX_En_Sig  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RX_Pin_In  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Rstn       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; LED_Out[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED_Out[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED_Out[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED_Out[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED_Out[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED_Out[5]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED_Out[6]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED_Out[7]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; RX_En_Sig  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; RX_Pin_In  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Rstn       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; LED_Out[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED_Out[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED_Out[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED_Out[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED_Out[4]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED_Out[5]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED_Out[6]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED_Out[7]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+    Info: Processing started: Tue Sep 20 20:54:33 2022
+Info: Command: quartus_sta UART_RX -c UART_RX
+Info: qsta_default_script.tcl version: #3
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is -40 degrees C
+Info (21077): High junction temperature is 100 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'UART_RX.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLK CLK
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 100C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.236
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.236             -53.882 CLK 
+Info (332146): Worst-case hold slack is 0.396
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.396               0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -50.545 CLK 
+Info: Analyzing Slow 1200mV -40C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.824
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.824             -43.669 CLK 
+Info (332146): Worst-case hold slack is 0.326
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.326               0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -50.545 CLK 
+Info: Analyzing Fast 1200mV -40C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.467
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.467              -7.573 CLK 
+Info (332146): Worst-case hold slack is 0.170
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.170               0.000 CLK 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -41.977 CLK 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4789 megabytes
+    Info: Processing ended: Tue Sep 20 20:54:35 2022
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

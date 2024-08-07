@@ -1,0 +1,113 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 100C Model Setup 'DispDay'
+Slack : -6.048
+TNS   : -53.949
+
+Type  : Slow 1200mV 100C Model Setup 'Time_module:U1|CLK1'
+Slack : -4.479
+TNS   : -87.599
+
+Type  : Slow 1200mV 100C Model Setup 'CLK'
+Slack : -3.851
+TNS   : -142.792
+
+Type  : Slow 1200mV 100C Model Hold 'DispDay'
+Slack : -0.632
+TNS   : -3.644
+
+Type  : Slow 1200mV 100C Model Hold 'CLK'
+Slack : 0.412
+TNS   : 0.000
+
+Type  : Slow 1200mV 100C Model Hold 'Time_module:U1|CLK1'
+Slack : 0.412
+TNS   : 0.000
+
+Type  : Slow 1200mV 100C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -81.385
+
+Type  : Slow 1200mV 100C Model Minimum Pulse Width 'DispDay'
+Slack : -3.000
+TNS   : -16.499
+
+Type  : Slow 1200mV 100C Model Minimum Pulse Width 'Time_module:U1|CLK1'
+Slack : -1.285
+TNS   : -34.695
+
+Type  : Slow 1200mV -40C Model Setup 'DispDay'
+Slack : -5.369
+TNS   : -46.343
+
+Type  : Slow 1200mV -40C Model Setup 'Time_module:U1|CLK1'
+Slack : -3.878
+TNS   : -73.887
+
+Type  : Slow 1200mV -40C Model Setup 'CLK'
+Slack : -3.261
+TNS   : -118.035
+
+Type  : Slow 1200mV -40C Model Hold 'DispDay'
+Slack : -0.625
+TNS   : -3.467
+
+Type  : Slow 1200mV -40C Model Hold 'Time_module:U1|CLK1'
+Slack : 0.340
+TNS   : 0.000
+
+Type  : Slow 1200mV -40C Model Hold 'CLK'
+Slack : 0.341
+TNS   : 0.000
+
+Type  : Slow 1200mV -40C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -81.385
+
+Type  : Slow 1200mV -40C Model Minimum Pulse Width 'DispDay'
+Slack : -3.000
+TNS   : -12.704
+
+Type  : Slow 1200mV -40C Model Minimum Pulse Width 'Time_module:U1|CLK1'
+Slack : -1.285
+TNS   : -34.695
+
+Type  : Fast 1200mV -40C Model Setup 'DispDay'
+Slack : -2.688
+TNS   : -22.467
+
+Type  : Fast 1200mV -40C Model Setup 'Time_module:U1|CLK1'
+Slack : -1.604
+TNS   : -29.571
+
+Type  : Fast 1200mV -40C Model Setup 'CLK'
+Slack : -1.341
+TNS   : -33.765
+
+Type  : Fast 1200mV -40C Model Hold 'DispDay'
+Slack : -0.470
+TNS   : -2.840
+
+Type  : Fast 1200mV -40C Model Hold 'CLK'
+Slack : 0.177
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Hold 'Time_module:U1|CLK1'
+Slack : 0.177
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -67.144
+
+Type  : Fast 1200mV -40C Model Minimum Pulse Width 'DispDay'
+Slack : -3.000
+TNS   : -7.998
+
+Type  : Fast 1200mV -40C Model Minimum Pulse Width 'Time_module:U1|CLK1'
+Slack : -1.000
+TNS   : -27.000
+
+------------------------------------------------------------

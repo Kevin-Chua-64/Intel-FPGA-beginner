@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Sep 01 20:03:47 2022
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Revision Name : D_trigger
+Top-level Entity Name : D_trigger
+Family : Cyclone IV E
+Device : EP4CE55F23I7
+Timing Models : Final
+Total logic elements : 5 / 55,856 ( < 1 % )
+    Total combinational functions : 5 / 55,856 ( < 1 % )
+    Dedicated logic registers : 0 / 55,856 ( 0 % )
+Total registers : 0
+Total pins : 5 / 325 ( 2 % )
+Total virtual pins : 0
+Total memory bits : 0 / 2,396,160 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 308 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

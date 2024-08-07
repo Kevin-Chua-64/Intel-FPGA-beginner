@@ -1,0 +1,49 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "DigOutA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DigOutA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DigOutA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DigOutA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DigOutB[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DigOutB[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DigOutB[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DigOutB[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Rstn",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

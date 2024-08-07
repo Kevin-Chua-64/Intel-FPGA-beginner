@@ -1,0 +1,4 @@
+module gate(SW_In, LED_Out);
+	input [1:0]SW_In;
+	output [5:0]LED_Out;
+endmodule

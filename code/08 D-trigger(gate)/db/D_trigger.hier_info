@@ -1,0 +1,13 @@
+|D_trigger
+CLK => U4.IN1
+CLK => U5.IN1
+SW_In => U6.IN0
+Setn => U1.IN1
+Setn => U3.IN1
+Setn => U5.IN2
+Clrn => U2.IN0
+Clrn => U4.IN2
+Clrn => U6.IN1
+LED_Out << LED_Out.DB_MAX_OUTPUT_PORT_TYPE
+
+

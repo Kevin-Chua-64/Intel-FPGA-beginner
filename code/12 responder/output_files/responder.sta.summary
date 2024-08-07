@@ -1,0 +1,173 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 100C Model Setup 'Display_module:U4|W_DigitronCS_Out.0111_174'
+Slack : -6.911
+TNS   : -46.117
+
+Type  : Slow 1200mV 100C Model Setup 'CLK'
+Slack : -3.827
+TNS   : -200.520
+
+Type  : Slow 1200mV 100C Model Setup 'Display_module:U4|cnt[0]'
+Slack : -2.522
+TNS   : -5.751
+
+Type  : Slow 1200mV 100C Model Setup 'Timer_module:U2|CLK1'
+Slack : -1.618
+TNS   : -17.243
+
+Type  : Slow 1200mV 100C Model Hold 'Display_module:U4|W_DigitronCS_Out.0111_174'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow 1200mV 100C Model Hold 'CLK'
+Slack : 0.397
+TNS   : 0.000
+
+Type  : Slow 1200mV 100C Model Hold 'Timer_module:U2|CLK1'
+Slack : 0.412
+TNS   : 0.000
+
+Type  : Slow 1200mV 100C Model Hold 'Display_module:U4|cnt[0]'
+Slack : 0.843
+TNS   : 0.000
+
+Type  : Slow 1200mV 100C Model Recovery 'CLK'
+Slack : -1.034
+TNS   : -20.528
+
+Type  : Slow 1200mV 100C Model Removal 'CLK'
+Slack : 1.045
+TNS   : 0.000
+
+Type  : Slow 1200mV 100C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -118.650
+
+Type  : Slow 1200mV 100C Model Minimum Pulse Width 'Timer_module:U2|CLK1'
+Slack : -1.285
+TNS   : -16.705
+
+Type  : Slow 1200mV 100C Model Minimum Pulse Width 'Display_module:U4|W_DigitronCS_Out.0111_174'
+Slack : -0.095
+TNS   : -2.159
+
+Type  : Slow 1200mV 100C Model Minimum Pulse Width 'Display_module:U4|cnt[0]'
+Slack : 0.411
+TNS   : 0.000
+
+Type  : Slow 1200mV -40C Model Setup 'Display_module:U4|W_DigitronCS_Out.0111_174'
+Slack : -6.371
+TNS   : -42.612
+
+Type  : Slow 1200mV -40C Model Setup 'CLK'
+Slack : -3.311
+TNS   : -165.482
+
+Type  : Slow 1200mV -40C Model Setup 'Display_module:U4|cnt[0]'
+Slack : -2.333
+TNS   : -5.114
+
+Type  : Slow 1200mV -40C Model Setup 'Timer_module:U2|CLK1'
+Slack : -1.490
+TNS   : -14.537
+
+Type  : Slow 1200mV -40C Model Hold 'Timer_module:U2|CLK1'
+Slack : 0.303
+TNS   : 0.000
+
+Type  : Slow 1200mV -40C Model Hold 'CLK'
+Slack : 0.327
+TNS   : 0.000
+
+Type  : Slow 1200mV -40C Model Hold 'Display_module:U4|W_DigitronCS_Out.0111_174'
+Slack : 0.388
+TNS   : 0.000
+
+Type  : Slow 1200mV -40C Model Hold 'Display_module:U4|cnt[0]'
+Slack : 0.884
+TNS   : 0.000
+
+Type  : Slow 1200mV -40C Model Recovery 'CLK'
+Slack : -0.808
+TNS   : -14.846
+
+Type  : Slow 1200mV -40C Model Removal 'CLK'
+Slack : 0.922
+TNS   : 0.000
+
+Type  : Slow 1200mV -40C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -118.650
+
+Type  : Slow 1200mV -40C Model Minimum Pulse Width 'Timer_module:U2|CLK1'
+Slack : -1.285
+TNS   : -16.705
+
+Type  : Slow 1200mV -40C Model Minimum Pulse Width 'Display_module:U4|W_DigitronCS_Out.0111_174'
+Slack : -0.066
+TNS   : -0.589
+
+Type  : Slow 1200mV -40C Model Minimum Pulse Width 'Display_module:U4|cnt[0]'
+Slack : 0.342
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Setup 'Display_module:U4|W_DigitronCS_Out.0111_174'
+Slack : -3.040
+TNS   : -20.304
+
+Type  : Fast 1200mV -40C Model Setup 'CLK'
+Slack : -1.353
+TNS   : -46.974
+
+Type  : Fast 1200mV -40C Model Setup 'Display_module:U4|cnt[0]'
+Slack : -0.766
+TNS   : -1.643
+
+Type  : Fast 1200mV -40C Model Setup 'Timer_module:U2|CLK1'
+Slack : -0.146
+TNS   : -0.926
+
+Type  : Fast 1200mV -40C Model Hold 'CLK'
+Slack : 0.170
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Hold 'Timer_module:U2|CLK1'
+Slack : 0.177
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Hold 'Display_module:U4|W_DigitronCS_Out.0111_174'
+Slack : 0.178
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Hold 'Display_module:U4|cnt[0]'
+Slack : 0.330
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Recovery 'CLK'
+Slack : 0.012
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Removal 'CLK'
+Slack : 0.479
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Minimum Pulse Width 'CLK'
+Slack : -3.000
+TNS   : -97.767
+
+Type  : Fast 1200mV -40C Model Minimum Pulse Width 'Timer_module:U2|CLK1'
+Slack : -1.000
+TNS   : -13.000
+
+Type  : Fast 1200mV -40C Model Minimum Pulse Width 'Display_module:U4|W_DigitronCS_Out.0111_174'
+Slack : 0.123
+TNS   : 0.000
+
+Type  : Fast 1200mV -40C Model Minimum Pulse Width 'Display_module:U4|cnt[0]'
+Slack : 0.427
+TNS   : 0.000
+
+------------------------------------------------------------

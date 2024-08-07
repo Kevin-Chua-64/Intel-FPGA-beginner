@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Aug 30 21:52:50 2022
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Revision Name : encode83
+Top-level Entity Name : encode83
+Family : Cyclone IV E
+Device : EP4CE55F23I7
+Timing Models : Final
+Total logic elements : 17 / 55,856 ( < 1 % )
+    Total combinational functions : 12 / 55,856 ( < 1 % )
+    Dedicated logic registers : 8 / 55,856 ( < 1 % )
+Total registers : 8
+Total pins : 17 / 325 ( 5 % )
+Total virtual pins : 0
+Total memory bits : 0 / 2,396,160 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 308 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

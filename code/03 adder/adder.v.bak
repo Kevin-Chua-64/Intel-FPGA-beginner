@@ -1,0 +1,4 @@
+module adder(SW_In, LED_Out);
+	input [2:0]SW_In;
+	output [1:0]LED_Out;
+endmodule
