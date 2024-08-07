@@ -1,5 +1,0 @@
-module three_bit_adder(SW_In, LED_Out);
-	input [6:0]SW_In;
-	output [3:0]LED_Out;
-	
-endmodule

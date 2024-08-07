@@ -1,7 +1,0 @@
-module D_trigger(CLK, SW_In, Setn, Clrn, LED_Out);
-
-	input CLK, SW_In, Setn, Clrn;
-	output LED_Out;
-	
-endmodule
-	

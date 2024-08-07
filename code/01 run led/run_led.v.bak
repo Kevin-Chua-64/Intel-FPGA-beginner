@@ -1,4 +1,0 @@
-module run_led(CLF, RDTn, LED_Out);
-	input CLK, RSTn;
-	output [7:0]LED_Out;
-endmodule

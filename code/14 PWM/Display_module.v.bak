@@ -1,5 +1,0 @@
-module Display_module
-(
-	CLK, RSTn, Count_D_Display, Count_P_Display, Count_D, Count_P, Duty, Digitron_Out, DigitronCS_Out,DigOutB
-	,DigOutA
-);

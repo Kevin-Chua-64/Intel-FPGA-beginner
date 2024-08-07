@@ -1,6 +1,0 @@
-module counter(CLK, Rstn, DigOutA, DigOutB);
-
-	input CLK, Rstn;
-	output [3:0]DigOutA, DigOutB;
-	
-endmodule
